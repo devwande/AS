@@ -8,21 +8,55 @@
     .container-box {
         @apply px-[clamp(24px,calc(24px+96*((100vw-375px)/1065)),120px)] w-full max-w-[1440px] mx-auto
     }
+
     .container-body {
         @apply m-6
     }
+
     .container-in {
         @apply mx-6;
     }
-    .button{
+
+    .button {
         @apply border flex mt-20 font-bold border-black bg-black text-white px-16 py-5
     }
+    .text-dark-blue{
+        color: var(--color-dark-blue);
+    }
 
-/*@layer base{*/
-/*    button{*/
-/*        @apply border flex mt-20 font-bold border-black bg-black text-white px-7 py-5*/
-/*    }*/
-/*}*/
+    .text-dark-gray{
+        color: var(--color-dark-gray);
+    }
+
+    .text-xl {
+        font-size: var(--text-xl);
+        line-height: var(--line-xl);
+        letter-spacing: var(--spacing-xl);
+    }
+
+    .text-lg {
+        font-size: var(--text-lg);
+        line-height: var(--line-lg);
+        letter-spacing: var(--spacing-lg);
+    }
+
+    .text-md {
+        font-size: var(--text-md);
+        line-height: var(--line-md);
+        letter-spacing: var(--spacing-md);
+    }
+
+    .text-sm {
+        font-size: var(--text-sm);
+        line-height: var(--line-sm);
+        letter-spacing: var(--spacing-sm);
+    }
+
+    .text-xsm {
+        font-size: var(--text-xsm);
+        line-height: var(--line-xsm);
+        letter-spacing: var(--spacing-xsm);
+    }
 }
 @theme {
     --screen-sm: 640px;
@@ -30,10 +64,8 @@
     --screen-lg: 1024px;
     --screen-xl: 1280px;
     --screen-2xl: 1536px;
-}
 
-{
-    --font-primary: "League Spartan", sans-serif;
+    --font-primary: "League Spartan", "sans-serif";
     --color-dark-blue: rgb(27, 29, 35);
     --color-dark-gray: rgb(96, 99, 109);
     --color-medium-gray: rgb(125, 130, 143);
@@ -56,39 +88,13 @@
     --text-sm: 32px;
     --line-sm: 40px;
     --spacing-sm: 0px;
+
+    --text-xsm: 18px;
+    --line-xsm: 24px;
+    --spacing-xsm: 0px;
 }
 
 
 
-.text-dark-blue{
-    color: var(--color-dark-blue);
-}
 
-.text-dark-gray{
-    color: var(--color-dark-gray);
-}
-
-.text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--line-xl);
-    letter-spacing: var(--spacing-xl);
-}
-
-.text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--line-lg);
-    letter-spacing: var(--spacing-lg);
-}
-
-.text-md {
-    font-size: var(--text-md);
-    line-height: var(--line-md);
-    letter-spacing: var(--spacing-md);
-}
-
-.text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--line-sm);
-    letter-spacing: var(--spacing-sm);
-}
 

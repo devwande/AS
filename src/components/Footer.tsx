@@ -5,14 +5,14 @@ import {ArrowRight} from "lucide-react";
 const Footer = () => {
     return (
         <>
-            <div className="flex flex-col md:hidden pt-40 relative items-center ">
-                <div className="relative bg-medium-gray pb-12 w-full flex justify-center">
+            <div className="flex flex-col md:hidden pt-40 relative items-center font-primary ">
+                <div className="relative bg-light-gray pb-12 w-full flex justify-center">
                     <img
                         src={archMobile}
                         alt="arch-mobile "
                         className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     />
-                    <div className="flex flex-col items-center justify-center pt-24 text-lg text-center space-y-10 font-bold font-spartan">
+                    <div className="flex flex-col items-center justify-center pt-24 text-xsm text-dark-gray text-center space-y-10 font-bold font-spartan">
                         <button className="block">Portfolio</button>
                         <button className="block">About Us</button>
                         <button className="block">Contact</button>
