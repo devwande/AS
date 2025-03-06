@@ -1,7 +1,29 @@
 @import "tailwindcss";
+
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@layer theme, base, components, utilities;
 
 
+@layer components {
+    .container-box {
+        @apply px-[clamp(24px,calc(24px+96*((100vw-375px)/1065)),120px)] w-full max-w-[1440px] mx-auto
+    }
+    .container-body {
+        @apply m-6
+    }
+    .container-in {
+        @apply mx-6;
+    }
+    .button{
+        @apply border flex mt-20 font-bold border-black bg-black text-white px-16 py-5
+    }
+
+/*@layer base{*/
+/*    button{*/
+/*        @apply border flex mt-20 font-bold border-black bg-black text-white px-7 py-5*/
+/*    }*/
+/*}*/
+}
 @theme {
     --screen-sm: 640px;
     --screen-md: 768px;
@@ -18,14 +40,6 @@
     --color-light-gray: rgb(200, 204, 216);
     --color-very-light-gray: rgb(238, 239, 244);
     --color-red: rgb(223, 86, 86);
-.text-dark-blue{
-    color: var(--color-dark-blue);
-}
-
-.text-dark-gray{
-    color: var(--color-dark-gray);
-}
-
 
     --text-xl: 250px;
     --line-xl: 200px;
@@ -42,6 +56,16 @@
     --text-sm: 32px;
     --line-sm: 40px;
     --spacing-sm: 0px;
+}
+
+
+
+.text-dark-blue{
+    color: var(--color-dark-blue);
+}
+
+.text-dark-gray{
+    color: var(--color-dark-gray);
 }
 
 .text-xl {
