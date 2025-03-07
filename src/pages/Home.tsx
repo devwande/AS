@@ -41,7 +41,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <hr className="w-1/3 container-in " />
+                <hr className="w-1/3 container-in" />
             </div>
 
             <div className="container-body h-screen flex justify-center items-center">

@@ -1,7 +1,7 @@
 @import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @layer theme, base, components, utilities;
+
 
 
 @layer components {
@@ -58,6 +58,13 @@
         letter-spacing: var(--spacing-xsm);
     }
 }
+
+/*@layer base {*/
+/*    hr {*/
+/*        @apply w-1/3 container-in ;*/
+/*    }*/
+/*}*/
+
 @theme {
     --screen-sm: 640px;
     --screen-md: 768px;
