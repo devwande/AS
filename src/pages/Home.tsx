@@ -22,7 +22,7 @@ const Home = () => {
         <>
             <Navbar />
             <div className="relative space-y-20">
-                <img src={"src/assets/images/paramour.webp"} alt="paramour" className="mx-auto h-[calc(100vh-82px)] w-full object-cover" />
+                <img src={"src/assets/images/paramour.webp"} alt="paramour" className="mx-auto h-[calc(100vh-82px)] w-full object-cover brightness-75" />
                 <div className="absolute inset-0 flex flex-col items-start justify-center text-start px-8 font-primary space-y-20">
                     <div>
                         <h1 className="text-white text-md ">
@@ -70,7 +70,7 @@ const Home = () => {
             </div>
 
             <div className="relative space-y-10 h-screen font-primary">
-                <img src={"src/assets/images/smallTeam.svg"} alt="team" className="w-full mx-auto h-[calc(100vh-100px)]" />
+                <img src={"src/assets/images/smallTeam.svg"} alt="team" className="w-full mx-auto h-[calc(100vh-100px)] brightness-50" />
                 <div className="absolute inset-0 flex flex-col items-start justify-center text-start container-in space-y-20">
                     <h1 className="text-white text-6xl font-bold">
                         Small team, big ideas
