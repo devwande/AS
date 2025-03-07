@@ -2,13 +2,13 @@ import Navbar from "../components/Navbar.tsx";
 import {ArrowRight} from "lucide-react";
 import {useNavigate} from "react-router-dom";
 import Footer from "../components/Footer";
+import Paramour from "../assets/images/paramour.webp";
+
 interface Project {
     id: number;
     name: string;
     src: string;
 }
-
-
 
 const projects: Project[] = [
     { id: 1, name: 'Project Del Sol', src: "src/assets/images/de-sol.webp" },
@@ -22,7 +22,7 @@ const Home = () => {
         <>
             <Navbar />
             <div className="relative space-y-20">
-                <img src={"src/assets/images/paramour.webp"} alt="paramour" className="mx-auto h-[calc(100vh-82px)] w-full object-cover brightness-75" />
+                <img src={Paramour} alt="paramour" className="mx-auto h-[calc(100vh-82px)] w-full object-cover brightness-75" />
                 <div className="absolute inset-0 flex flex-col items-start justify-center text-start px-8 font-primary space-y-20">
                     <div>
                         <h1 className="text-white text-md ">
