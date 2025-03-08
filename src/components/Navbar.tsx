@@ -1,12 +1,42 @@
 import arch from "../assets/icons/arch.svg"
-import {motion, useCycle} from "framer-motion";
-import {useRef} from "react";
+import {motion, useCycle, AnimatePresence, MotionConfig} from "framer-motion";
+import {useRef, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 
 const Navbar = () => {
 
     const [mobileNav, toggleMobileNav] = useCycle(false, true);
-    // const menuRef = useRef<HTMLDivElement>(null);
+    const menuRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (mobileNav) {
+                toggleMobileNav();
+            }
+        };
+
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                menuRef.current &&
+                !menuRef.current.contains(event.target as Node) &&
+                buttonRef.current &&
+                !buttonRef.current.contains(event.target as Node)
+            ) {
+                toggleMobileNav();
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [mobileNav]);
 
     return (
         <>
@@ -42,6 +72,99 @@ const Navbar = () => {
                 </motion.button>
                 </div>
             </div>
+
+            <AnimatePresence>
+                {mobileNav && (
+                    <MotionConfig
+                        transition={{
+                            type: "spring",
+                            bounce: 0.099,
+                        }}
+                    >
+                        <motion.div
+                            variants={{
+                                open: {
+                                    x: "0%",
+                                    transition: {
+                                        type: "spring",
+                                        bounce: 0.099,
+                                        when: "beforeChildren",
+                                    },
+                                },
+                                closed: {
+                                    x: "100%",
+                                    transition: {
+                                        type: "spring",
+                                        bounce: 0.099,
+                                        when: "afterChildren",
+                                    },
+                                },
+                            }}
+                            initial="closed"
+                            animate="open"
+                            exit="closed"
+                            ref={menuRef}
+                            className="md:hidden space-y-20 h-1/2 flex flex-col fixed right-0 w-5/6 bg-light-gray py-10 z-20"
+                        >
+                            <motion.button
+                                variants={{
+                                    open: {
+                                        y: "0%",
+                                        opacity: 1,
+                                    },
+                                    closed: {
+                                        y: "25%",
+                                        opacity: 0,
+                                    },
+                                }}
+                                className="flex justify-start pl-8 text-sm font-primary font-bold"
+                                onClick={() => navigate("/portfolio")}
+                            >
+                                Portfolio
+                            </motion.button>
+                            <motion.button
+                                variants={{
+                                    open: {
+                                        y: "0%",
+                                        opacity: 1,
+                                    },
+                                    closed: {
+                                        y: "25%",
+                                        opacity: 0,
+                                    },
+                                }}
+                                className="flex justify-start pl-8 text-sm font-primary font-bold"
+                                onClick={() => navigate("/about")}
+                            >
+                                About Us
+                            </motion.button>
+                            <motion.button
+                                variants={{
+                                    open: {
+                                        y: "0%",
+                                        opacity: 1,
+                                    },
+                                    closed: {
+                                        y: "25%",
+                                        opacity: 0,
+                                    },
+                                }}
+                                className="flex justify-start pl-8 text-sm font-primary font-bold"
+                                onClick={() => navigate("/contact")}
+                            >
+                                Contact
+                            </motion.button>
+                        </motion.div>
+                    </MotionConfig>
+                )}
+            </AnimatePresence>
+
+            {/* DESKTOP NAVBAR */}
+            <main className={"max-w-[1440px] w-full mx-auto md:px-24 relative hidden md:block"}>
+                <nav className="p-6 md:py-12 flex justify-between md:justify-normal gap-20 items-center max-w-[calc(570px+46px)] md:max-w-[1110px] md:px-0 mx-auto relative">
+
+                </nav>
+            </main>
         </>
     )
 }

@@ -14,7 +14,7 @@ const About = () => {
             </div>
             <main className={"space-y-48"}>
             <div className={"container-body space-y-8"}>
-                <h1 className={"font-primary font-bold text-6xl overflow-y-auto"}>Your team of professionals</h1>
+                <h1 className={"font-primary font-bold text-6xl"}>Your team of professionals</h1>
                 <p className={"font-primary text-2xl text-medium-gray"}>Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.</p>
             </div>
 

@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className="relative space-y-20">
+            <div className="relative space-y-20 max-w-[1440px] md:px-24">
                 <img src={Paramour} alt="paramour" className="mx-auto h-[calc(100vh-82px)] w-full object-cover brightness-75" />
                 <div className="absolute inset-0 flex flex-col items-start justify-center text-start px-8 font-primary space-y-20">
                     <div>
