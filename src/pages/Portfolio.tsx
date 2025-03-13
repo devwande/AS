@@ -1,12 +1,29 @@
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 import PortfolioProjects from "../components/PortfolioProjects.tsx";
+import {motion} from "framer-motion";
 
 interface Portfolio {
     label: string;
     src: string;
     date: string;
 }
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            type: "spring",
+            staggerChildren: 0.4,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { x: 50, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+};
 
 const Portfolio = () => {
     const projects: Portfolio[] = [
@@ -25,6 +42,25 @@ const Portfolio = () => {
     ]
     return (
         <>
+            <div className="relative hidden md:flex">
+                <div className="absolute top-0 left-12">
+                    <hr className="top-0 left-16 w-[1px] h-24 bg-medium-gray transform translate-x-0 translate-y-0" />
+
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="text-medium-gray rotate-90 tracking-widest mt-[84px] -ml-[60px] font-primary text-xsm "
+                    >
+                        {["P", "O", "R", "T", "F", "O", "L", "I", "O"].map((letter, index) => (
+                            <motion.span key={index} variants={itemVariants}>
+                                {letter}
+                            </motion.span>
+                        ))}
+                    </motion.div>
+                </div>
+            </div>
+
             <Navbar />
 
             <div className={"grid grid-cols-1 space-y-6 md:px-24"}>

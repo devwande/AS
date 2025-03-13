@@ -38,7 +38,6 @@ const Home = () => {
     const navigate = useNavigate();
     return (
         <>
-
             <div className="relative hidden md:flex">
                 <div className="absolute top-0 left-12">
                     <hr className="top-0 left-16 w-[1px] h-24 bg-medium-gray transform translate-x-0 translate-y-0" />
