@@ -164,9 +164,9 @@ const Navbar = () => {
 
                 <div className="md:py-12 flex justify-start space-x-20 items-center max-w-[calc(570px+46px)] md:max-w-[1110px] md:mx-0 mx-auto relative font-primary font-bold font-xsm text-medium-gray">
                     <img src={"src/assets/icons/arch.svg"} alt="Arch" />
-                    <button>Portfolio</button>
-                    <button>Contact</button>
-                    <button>Contact Us</button>
+                    <button onClick={() => navigate("/portfolio")}>Portfolio</button>
+                    <button onClick={() => navigate("/about")}>About Us</button>
+                    <button onClick={() => navigate("/contact")}>Contact</button>
                 </div>
             </main>
         </>

@@ -27,7 +27,7 @@ const Portfolio = () => {
         <>
             <Navbar />
 
-            <div className={"grid grid-cols-1 space-y-6"}>
+            <div className={"grid grid-cols-1 space-y-6 md:px-24"}>
                 {projects.map((project, index) => (
                     <PortfolioProjects key={index} src={project.src} label={project.label} date={project.date} alt={project.label} />
                 ))}

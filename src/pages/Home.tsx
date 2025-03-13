@@ -75,7 +75,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div><hr className="w-1/3 container-in md:mx-0" /></div>
+                <div><hr className="w-1/3 container-in md:mx-0 md:hidden" /></div>
 
                 <div className="container-in md:mx-0 h-full flex justify-center items-center text-start">
 
