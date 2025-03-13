@@ -18,7 +18,7 @@
     }
 
     .button {
-        @apply border flex mt-20 font-bold border-black bg-black text-white px-16 py-5
+        @apply border flex font-bold border-black bg-black text-white px-16 py-5 gap-x-3
     }
     .text-dark-blue{
         color: var(--color-dark-blue);
@@ -59,12 +59,6 @@
     }
 }
 
-/*@layer base {*/
-/*    hr {*/
-/*        @apply w-1/3 container-in ;*/
-/*    }*/
-/*}*/
-
 @theme {
     --screen-sm: 640px;
     --screen-md: 768px;
@@ -80,9 +74,9 @@
     --color-very-light-gray: rgb(238, 239, 244);
     --color-red: rgb(223, 86, 86);
 
-    --text-xl: 250px;
+    --text-xl: 150px;
     --line-xl: 200px;
-    --spacing-xl: -5px;
+    --spacing-xl: -3px;
 
     --text-lg: 96px;
     --line-lg: 80px;

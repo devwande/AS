@@ -160,10 +160,14 @@ const Navbar = () => {
             </AnimatePresence>
 
             {/* DESKTOP NAVBAR */}
-            <main className={"max-w-[1440px] w-full mx-auto md:px-24 relative hidden md:block"}>
-                <nav className="p-6 md:py-12 flex justify-between md:justify-normal gap-20 items-center max-w-[calc(570px+46px)] md:max-w-[1110px] md:px-0 mx-auto relative">
+            <main className={"max-w-[1440px] hidden md:block w-full mx-auto md:px-24 relative"}>
 
-                </nav>
+                <div className="md:py-12 flex justify-start space-x-20 items-center max-w-[calc(570px+46px)] md:max-w-[1110px] md:mx-0 mx-auto relative font-primary font-bold font-xsm text-medium-gray">
+                    <img src={"src/assets/icons/arch.svg"} alt="Arch" />
+                    <button>Portfolio</button>
+                    <button>Contact</button>
+                    <button>Contact Us</button>
+                </div>
             </main>
         </>
     )
