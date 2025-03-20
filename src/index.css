@@ -10,7 +10,7 @@
     }
 
     .container-body {
-        @apply m-6
+        @apply p-6
     }
 
     .container-in {
@@ -60,11 +60,11 @@
 }
 
 @theme {
-    --screen-sm: 640px;
+    --screen-sm: 570px;
     --screen-md: 768px;
+    --screen-ls: 900px;
     --screen-lg: 1024px;
     --screen-xl: 1280px;
-    --screen-2xl: 1536px;
 
     --font-primary: "League Spartan", "sans-serif";
     --color-dark-blue: rgb(27, 29, 35);

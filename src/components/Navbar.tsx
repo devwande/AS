@@ -40,7 +40,8 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="flex justify-between relative md:hidden container-body">
+
+            <div className="flex justify-between relative md:hidden container-body sm:px-0 max-w-[570px] mx-auto">
                 <div><img src={arch} alt="Arch" /></div>
                 <div><motion.button
                     animate={mobileNav ? "open" : "closed"}

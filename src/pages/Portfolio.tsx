@@ -42,7 +42,7 @@ const Portfolio = () => {
     ]
     return (
         <>
-            <div className="relative hidden md:flex">
+            <div className="w-full relative hidden md:flex ">
                 <div className="absolute top-0 left-12">
                     <hr className="top-0 left-16 w-[1px] h-24 bg-medium-gray transform translate-x-0 translate-y-0" />
 
@@ -50,7 +50,7 @@ const Portfolio = () => {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="text-medium-gray rotate-90 tracking-widest mt-[84px] -ml-[60px] font-primary text-xsm "
+                        className="text-medium-gray rotate-90 tracking-[18px] mt-[158px] -ml-[130px] font-primary text-xsm "
                     >
                         {["P", "O", "R", "T", "F", "O", "L", "I", "O"].map((letter, index) => (
                             <motion.span key={index} variants={itemVariants}>
@@ -63,7 +63,7 @@ const Portfolio = () => {
 
             <Navbar />
 
-            <div className={"grid grid-cols-1 space-y-6 md:px-24"}>
+            <div className={"grid grid-cols-1 space-y-6 md:px-24 max-w-[570px] md:max-w-full mx-auto md:mx-0"}>
                 {projects.map((project, index) => (
                     <PortfolioProjects key={index} src={project.src} label={project.label} date={project.date} alt={project.label} />
                 ))}

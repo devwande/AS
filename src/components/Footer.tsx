@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <>
             {/*MOBILE NAVBAR*/}
-            <footer className="flex flex-col md:hidden pt-40 relative items-center font-primary ">
+            <footer className="max-w-[570px] mx-auto flex flex-col md:hidden pt-40 relative items-center font-primary ">
                 <div className="relative bg-light-gray pb-12 w-full flex justify-center">
                     <img
                         src={archMobile}
