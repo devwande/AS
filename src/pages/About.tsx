@@ -42,7 +42,7 @@ const About = () => {
 
             <Navbar/>
 
-            <div className={"relative md:px-24 md:mb-20"}>
+            <div className={"relative md:px-24 md:mb-24"}>
                 <img src={"src/assets/images/about.svg"} alt="about" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] w-full object-cover md:max-w-[635px]"}/>
                 <div className="md:hidden absolute z-10 bg-white h-[35px] w-full bottom-[-1px] right-[8%]"></div>
                 <div className={"hidden md:block absolute z-10 bg-white h-[450px] w-[500px] bottom-0 right-[9%]"}>
