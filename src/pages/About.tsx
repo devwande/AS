@@ -29,9 +29,9 @@ const About = () => {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="text-medium-gray rotate-90 tracking-widest mt-[58px] -ml-[30px] font-primary text-xsm "
+                        className="text-medium-gray rotate-90 tracking-widest mt-[80px] -ml-[50px] font-primary text-xsm "
                     >
-                        {["A", "B", "O", "U", "T"].map((letter, index) => (
+                        {["A", "B", "O", "U", "T", " ", "U", "S" ].map((letter, index) => (
                             <motion.span key={index} variants={itemVariants}>
                                 {letter}
                             </motion.span>
@@ -42,28 +42,38 @@ const About = () => {
 
             <Navbar/>
 
-            <div className={"relative "}>
-                <img src={"src/assets/images/about.svg"} alt="about" className={"h-[375px] w-full object-cover"}/>
-                <div className="absolute z-10 bg-white h-[35px] w-full bottom-[-1px] right-[8%]"></div>
+            <div className={"relative md:px-24 md:mb-20"}>
+                <img src={"src/assets/images/about.svg"} alt="about" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] w-full object-cover md:max-w-[635px]"}/>
+                <div className="md:hidden absolute z-10 bg-white h-[35px] w-full bottom-[-1px] right-[8%]"></div>
+                <div className={"hidden md:block absolute z-10 bg-white h-[450px] w-[500px] bottom-0 right-[9%]"}>
+                    <div className={"hidden md:block absolute space-y-24"}>
+                        <div><h1 className={"font-primary absolute -top-[25%] right-0 text-xl font-bold text-light-gray"}>About</h1></div>
+                        <hr className={"w-1/5 ml-12" }/>
+                        <div className={"ml-12 space-y-4 "}>
+                            <h1 className={"font-primary font-bold text-6xl"}>Your team of professionals</h1>
+                            <p className={"font-primary text-xsm text-medium-gray"}>Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <main className={"space-y-48"}>
-                <div className={"container-body space-y-8"}>
-                    <h1 className={"font-primary font-bold text-6xl"}>Your team of professionals</h1>
-                    <p className={"font-primary text-2xl text-medium-gray"}>Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.</p>
+            <main className={"space-y-48 md:px-18"}>
+                <div className={"md:hidden space-y-8 mx-4 relative"}>
+                    <h1 className={"font-primary font-bold text-[3rem] leading-[3.25rem] tracking-[1.2px]"}>Your team of professionals</h1>
+                    <p className={"font-primary text-xsm text-medium-gray"}>Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.</p>
                 </div>
 
-                <hr className={"w-1/3 container-in mt-24 mb-20" }/>
+                <hr className={"w-1/3 container-in md:px-0 mt-24 mb-24 md:hidden" }/>
 
                 <div className={"container-body space-y-8 "}>
-                    <h1 className={"font-primary font-bold text-md"}>Our Heritage</h1>
-                    <p className={"font-primary text-2xl text-medium-gray"}>Founded in 2007, we started as a trio of architects. Our complimentary skills and relentless attention to detail turned Arch into one of the most sought after boutique firms in the country.</p>
-                    <p className={"font-primary text-2xl text-medium-gray"}>Specializing in Urban Design allowed us to focus on creating exceptional structures that live in harmony with their surroundings. We consider every detail from every surrounding element to inform our designs. </p>
-                    <p className={"font-primary text-2xl text-medium-gray"}>Our small team of world-class professionals provides input on every project.</p>
+                    <h1 className={"font-primary font-bold text-md max-w-1/2"}>Our Heritage</h1>
+                    <p className={"font-primary text-xsm text-medium-gray"}>Founded in 2007, we started as a trio of architects. Our complimentary skills and relentless attention to detail turned Arch into one of the most sought after boutique firms in the country.</p>
+                    <p className={"font-primary text-xsm text-medium-gray"}>Specializing in Urban Design allowed us to focus on creating exceptional structures that live in harmony with their surroundings. We consider every detail from every surrounding element to inform our designs. </p>
+                    <p className={"font-primary text-xsm text-medium-gray"}>Our small team of world-class professionals provides input on every project.</p>
                 </div>
 
-                <div className={"container-body space-y-12 "}>
-                   <h1 className={"font-primary font-bold text-md"}>The Leaders</h1>
-                    <div className={"space-y-12"}>
+                <div className={"container-body space-y-12 md:gap-y-20"}>
+                   <h1 className={"font-primary font-bold text-md max-w-1/2"}>The Leaders</h1>
+                    <div className={"space-y-12 md:grid md:grid-cols-2 md:gap-3"}>
                         <div className={"font-primary"}>
                             <img src={"src/assets/images/Jake.svg"} alt={"Jake"} className={"w-full"}/>
                             <h1 className={"text-sm font-bold"}>Jake Richards</h1>
