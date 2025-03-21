@@ -58,44 +58,43 @@
         letter-spacing: var(--spacing-xsm);
     }
 }
+@layer theme {
+    @theme {
+        --screen-sm: 570px;
+        --screen-md: 768px;
+        --screen-ls: 900px;
+        --screen-lg: 1024px;
+        --screen-xl: 1280px;
 
-@theme {
-    --screen-sm: 570px;
-    --screen-md: 768px;
-    --screen-ls: 900px;
-    --screen-lg: 1024px;
-    --screen-xl: 1280px;
+        --font-primary: "League Spartan", "sans-serif";
+        --color-dark-blue: rgb(27, 29, 35);
+        --color-dark-gray: rgb(96, 99, 109);
+        --color-medium-gray: rgb(125, 130, 143);
+        --color-light-gray: rgb(200, 204, 216);
+        --color-very-light-gray: rgb(238, 239, 244);
+        --color-red: rgb(223, 86, 86);
 
-    --font-primary: "League Spartan", "sans-serif";
-    --color-dark-blue: rgb(27, 29, 35);
-    --color-dark-gray: rgb(96, 99, 109);
-    --color-medium-gray: rgb(125, 130, 143);
-    --color-light-gray: rgb(200, 204, 216);
-    --color-very-light-gray: rgb(238, 239, 244);
-    --color-red: rgb(223, 86, 86);
+        --text-xl: 150px;
+        --line-xl: 200px;
+        --spacing-xl: -3px;
 
-    --text-xl: 150px;
-    --line-xl: 200px;
-    --spacing-xl: -3px;
+        --text-lg: 96px;
+        --line-lg: 80px;
+        --spacing-lg: -2px;
 
-    --text-lg: 96px;
-    --line-lg: 80px;
-    --spacing-lg: -2px;
+        --text-md: 72px;
+        --line-md: 64px;
+        --spacing-md: -2px;
 
-    --text-md: 72px;
-    --line-md: 64px;
-    --spacing-md: -2px;
+        --text-sm: 32px;
+        --line-sm: 40px;
+        --spacing-sm: 0px;
 
-    --text-sm: 32px;
-    --line-sm: 40px;
-    --spacing-sm: 0px;
-
-    --text-xsm: 18px;
-    --line-xsm: 24px;
-    --spacing-xsm: 0px;
+        --text-xsm: 18px;
+        --line-xsm: 24px;
+        --spacing-xsm: 0px;
+    }
 }
-
-
 
 
 

@@ -65,41 +65,41 @@ const About = () => {
 
                 <hr className={"w-1/3 container-in md:px-0 mt-24 mb-24 md:hidden" }/>
 
-                <div className={"container-body space-y-8 ls:space-y-0"}>
-                    <div>
+                <div className={"container-body lg:grid lg:grid-cols-2 lg:gap-6"}>
+                    <div className={"space-y-8 lg:space-y-5"}>
                         <h1 className={"font-primary font-bold text-md max-w-1/2"}>Our Heritage</h1>
                         <p className={"font-primary text-xsm text-medium-gray"}>Founded in 2007, we started as a trio of architects. Our complimentary skills and relentless attention to detail turned Arch into one of the most sought after boutique firms in the country.</p>
                         <p className={"font-primary text-xsm text-medium-gray"}>Specializing in Urban Design allowed us to focus on creating exceptional structures that live in harmony with their surroundings. We consider every detail from every surrounding element to inform our designs. </p>
                         <p className={"font-primary text-xsm text-medium-gray"}>Our small team of world-class professionals provides input on every project.</p>
                     </div>
 
-                    <div className={"hidden ls:block"}>
+                    <div className={"hidden lg:block"}>
                         <img src={Heritage} alt={Heritage}/>
                     </div>
                 </div>
 
-                <div className={"container-body space-y-12 md:gap-y-20"}>
-                   <h1 className={"font-primary font-bold text-md max-w-1/2"}>The Leaders</h1>
+                <div className={"container-body space-y-12 md:gap-y-20 lg:grid lg:grid-cols-[0.8fr_1.5fr] lg:gap-6"}>
+                    <div className={"max-w-1/2"}><h1 className={"font-primary font-bold text-md "}>The Leaders</h1></div>
                     <div className={"space-y-12 md:grid md:grid-cols-2 md:gap-3"}>
-                        <div className={"font-primary"}>
+                        <div className={"font-primary max-w-[350px]"}>
                             <img src={"src/assets/images/Jake.svg"} alt={"Jake"} className={"w-full"}/>
                             <h1 className={"text-sm font-bold"}>Jake Richards</h1>
                             <p className={"text-xsm text-dark-gray"}>Chief Architect</p>
                         </div>
 
-                        <div className={"font-primary"}>
+                        <div className={"font-primary max-w-[350px] max-md:justify-self-end "}>
                             <img src={"src/assets/images/thompson.svg"} alt={"Thompson"} className={"w-full"}/>
                             <h1 className={"text-sm font-bold"}>Thompson Smith</h1>
                             <p className={"text-xsm text-dark-gray"}>Head of finance</p>
                         </div>
 
-                        <div className={"font-primary"}>
+                        <div className={"font-primary max-w-[350px]"}>
                             <img src={"src/assets/images/jackson.svg"} alt={"Jackson"} className={"w-full"}/>
                             <h1 className={"text-sm font-bold"}>Jackson Rouke</h1>
                             <p className={"text-xsm text-dark-gray"}>Lead Designer</p>
                         </div>
 
-                        <div className={"font-primary"}>
+                        <div className={"font-primary max-w-[350px] max-md:justify-self-end"}>
                             <img src={"src/assets/images/Maria.svg"} alt={"Maria"} className={"w-full"}/>
                             <h1 className={"text-sm font-bold"}>Maria Simpson</h1>
                             <p className={"text-xsm text-dark-gray"}>Senior Architect</p>

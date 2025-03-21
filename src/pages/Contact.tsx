@@ -55,7 +55,7 @@ const Contact = () => {
 
             <Navbar />
 
-            <div className={"relative md:px-24 md:mb-24"}>
+            <div className={"relative md:px-24 md:mb-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440]"}>
                 <img src={"src/assets/images/telephone.svg"} alt="Contact-us" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] w-full object-cover md:max-w-[635px]"}/>
                 <div className="md:hidden absolute z-10 bg-white h-[35px] w-full bottom-[-1px] right-[8%]"></div>
                 <div className={"hidden md:block absolute z-10 bg-white h-[450px] w-[500px] bottom-0 right-[9%]"}>
@@ -69,7 +69,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <main className={"space-y-48 md:px-18"}>
+            <main className={"space-y-48 md:px-18 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440px]"}>
                 <div className={"md:hidden container-body space-y-8"}>
                     <h1 className={"font-primary font-bold text-6xl"}>Tell us about your project</h1>
                     <p className={"font-primary text-xsm text-medium-gray"}>We’d love to hear more about your project. Please, leave a message below or give us a call. We have two offices, one in Texas and one in Tennessee. If you find yourself nearby, come say hello!</p>
@@ -99,7 +99,7 @@ const Contact = () => {
                     ))}
                 </div>
 
-                <img src={"src/assets/images/Maps.svg"} alt={"Maps"} className={"w-full h-auto"} />
+                <img src={"src/assets/images/Maps.svg"} alt={"Maps"} className={"w-full object-cover transition-all duration-300 h-[400px]"} />
 
                 <div className={"container-body"}>
                     <h1 className={"font-primary font-bold text-md pb-20"}>Connect with us</h1>
