@@ -58,7 +58,7 @@ const Contact = () => {
             <div className={"relative md:px-24 md:mb-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440]"}>
                 <img src={"src/assets/images/telephone.svg"} alt="Contact-us" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] w-full object-cover md:max-w-[635px]"}/>
                 <div className="md:hidden absolute z-10 bg-white h-[35px] w-full bottom-[-1px] right-[8%]"></div>
-                <div className={"hidden md:block absolute z-10 bg-white h-[450px] w-[500px] bottom-0 right-[9%]"}>
+                <div className={"hidden md:block absolute z-10 bg-white h-[450px] w-[500px] ls:h-[450px] ls:w-[600px] xl:w-[700px] xl:h-[500px] transition-all duration-300 bottom-0 right-[9%] xl:right-[20%]"}>
                     <div className={"hidden md:block absolute space-y-24"}>
                         <div><h1 className={"font-primary absolute -top-[25%] right-0 text-xl font-bold text-light-gray"}>Contact</h1></div>
                         <hr className={"w-1/5 ml-12" }/>
@@ -77,45 +77,52 @@ const Contact = () => {
 
                 <hr className={"w-1/3 container-in mt-24 mb-20 md:hidden" }/>
 
-                <div className={"container-body space-y-16"}>
-                    <h1 className={"font-primary font-bold text-md max-w-1/2"}>Contact Details</h1>
+                <div className={"container-body space-y-16 ls:grid ls:grid-cols-[1fr_1.5fr] ls:gap-3 w-full"}>
+                    <div><h1 className={"font-primary font-bold text-md max-w-1/2"}>Contact Details</h1></div>
 
-                    {contact.map(contact => (
-                        <div className={"text-xsm font-primary space-y-8"}>
-                            <div className={"text-light-gray font-bold"}>{contact.office}</div>
+                    <div className={"space-y-8 md:grid md:grid-cols-2 md:gap-6"}>
+                        {contact.map(contact => (
+                            <div className={"text-xsm font-primary space-y-8"}>
+                                <div className={"text-light-gray font-bold"}>{contact.office}</div>
 
-                            <div className={"md:flex md:justify-between"}>
-                                <div>
-                                    <p>{contact.mail}</p>
-                                    <p>{contact.address}</p>
-                                    <p>{contact.phone}</p>
-                                </div>
+                                <div className={"space-y-8 md:flex md:justify-between md:flex-col md:space-y-16"}>
+                                    <div>
+                                        <p>{contact.mail}</p>
+                                        <p>{contact.address}</p>
+                                        <p>{contact.phone}</p>
+                                    </div>
 
-                                <div className={"font-primary font-bold"}>
-                                    <button className={"flex gap-x-6"}>View on Map <ArrowRight /></button>
+                                    <div className={"font-primary font-bold"}>
+                                        <button className={"flex gap-x-6"}>View on Map <ArrowRight /></button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
 
                 <img src={"src/assets/images/Maps.svg"} alt={"Maps"} className={"w-full object-cover transition-all duration-300 h-[400px]"} />
 
-                <div className={"container-body"}>
-                    <h1 className={"font-primary font-bold text-md pb-20"}>Connect with us</h1>
+                <div className={"container-body ls:grid ls:grid-cols-[1fr_1.5fr]"}>
+                    <div><h1 className={"font-primary font-bold text-md pb-20 max-w-3/4"}>Connect with us</h1></div>
 
-                    <form className={"flex flex-col gap-y-8"}>
-                        <input type={"text"} id={"name"} placeholder={"Name"} className={"px-4 focus:outline-hidden text-black placeholder: font-primary placeholder:text-2xl placeholder:font-bold placeholder:text-medium-gray"}/>
-                        <hr className="border-t-[2px]" />
-                        <input type={"text"} id={"name"} placeholder={"Email"} className={"px-4 focus:outline-hidden placeholder: font-primary placeholder:text-2xl placeholder:font-bold placeholder:text-medium-gray"}/>
-                        <hr className="border-t-[2px]" />
-                        <input type={"text"} id={"name"} placeholder={"Message"} className={"px-4 focus:outline-hidden placeholder:font-primary placeholder:text-2xl placeholder:font-bold placeholder:text-medium-gray"}/>
-                        <hr className="border-t-[2px]" />
-                    </form>
-                    <div className="flex justify-end">
-                        <button type="submit" className="bg-black text-white p-4 w-16 h-16 flex items-center justify-center" >
-                            <ArrowRight className="w-6 h-6" />
-                        </button>
+                    <div className={"container-body "}>
+                        <form className={""}>
+                            <div className={"flex flex-col gap-y-12"}>
+                                <input type={"text"} id={"name"} placeholder={"Name"} className={"px-4 focus:outline-hidden text-black placeholder:font-primary placeholder:text-2xl placeholder:font-bold placeholder:text-medium-gray"}/>
+                                <hr className="border-t-[3px]" />
+                                <input type={"text"} id={"name"} placeholder={"Email"} className={"px-4 focus:outline-hidden placeholder:font-primary placeholder:text-2xl placeholder:font-bold placeholder:text-medium-gray"}/>
+                                <hr className="border-t-[3px]" />
+                                <input type={"text"} id={"name"} placeholder={"Message"} className={"px-4 focus:outline-hidden placeholder:font-primary placeholder:text-2xl placeholder:font-bold placeholder:text-medium-gray"}/>
+                                <hr className="border-t-[3px]" />
+                            </div>
+                            <div className="flex justify-end">
+                                <button type="submit" className="bg-black text-white p-4 w-16 h-16 flex items-center justify-center"  >
+                                    <ArrowRight className="w-6 h-6" />
+                                </button>
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </main>

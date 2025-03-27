@@ -58,13 +58,13 @@
         letter-spacing: var(--spacing-xsm);
     }
 }
-@layer theme {
+/*@layer theme {*/
     @theme {
-        --screen-sm: 570px;
-        --screen-md: 768px;
-        --screen-ls: 900px;
-        --screen-lg: 1024px;
-        --screen-xl: 1280px;
+        --breakpoint-sm: 570px;
+        --breakpoint-md: 768px;
+        --breakpoint-ls: 900px;
+        --breakpoint-lg: 1024px;
+        --breakpoint-xl: 1280px;
 
         --font-primary: "League Spartan", "sans-serif";
         --color-dark-blue: rgb(27, 29, 35);
@@ -94,7 +94,7 @@
         --line-xsm: 24px;
         --spacing-xsm: 0px;
     }
-}
+/*}*/
 
 
 

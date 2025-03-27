@@ -29,7 +29,7 @@ const Footer = () => {
             </footer>
 
             {/*DESKTOP NAVBAR*/}
-            <footer className="mt-32 hidden md:flex w-screen justify-center max-w-screen">
+            <footer className="max-w-[1440px] mx-auto mt-32 hidden md:flex w-screen justify-center">
                 <div className="flex w-screen max-w-screen-xl">
                     <div className="flex w-5/6 bg-light-gray space-x-12 text-xsm text-medium-gray font-primary font-bold items-center">
                         <img src={archMobile} alt="arch-mobile" className="" />

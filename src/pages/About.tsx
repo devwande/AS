@@ -46,9 +46,9 @@ const About = () => {
             <div className={"relative md:px-24 md:mb-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440]"}>
                 <img src={"src/assets/images/about.svg"} alt="about" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] w-full object-cover md:max-w-[635px]"}/>
                 <div className="md:hidden absolute z-10 bg-white h-[35px] w-full bottom-[-1px] right-[8%]"></div>
-                <div className={"hidden md:block absolute z-10 bg-white h-[450px] w-[500px] bottom-0 right-[9%]"}>
-                    <div className={"hidden md:block absolute space-y-24"}>
-                        <div><h1 className={"font-primary absolute -top-[25%] right-0 text-xl font-bold text-light-gray"}>About</h1></div>
+                <div className={"hidden md:block absolute z-10 bg-white h-[450px] w-[500px] ls:h-[450px] ls:w-[600px] xl:w-[700px] xl:h-[500px] transition-all duration-300 bottom-0 right-[9%] xl:right-[20%]"}>
+                    <div className={"hidden md:block absolute space-y-24 "}>
+                        <div><h1 className={"font-primary absolute -top-[25%] right-0 ls:-top-[20%] xl:right-12 text-xl font-bold text-light-gray"}>About</h1></div>
                         <hr className={"w-1/5 ml-12" }/>
                         <div className={"ml-12 space-y-4 "}>
                             <h1 className={"font-primary font-bold text-6xl"}>Your team of professionals</h1>
@@ -65,16 +65,16 @@ const About = () => {
 
                 <hr className={"w-1/3 container-in md:px-0 mt-24 mb-24 md:hidden" }/>
 
-                <div className={"container-body lg:grid lg:grid-cols-2 lg:gap-6"}>
-                    <div className={"space-y-8 lg:space-y-5"}>
+                <div className={"container-body h-full ls:grid ls:grid-cols-[1fr_1.3fr] ls:gap-2"}>
+                    <div className={"space-y-8 lg:space-y-5 h-full"}>
                         <h1 className={"font-primary font-bold text-md max-w-1/2"}>Our Heritage</h1>
                         <p className={"font-primary text-xsm text-medium-gray"}>Founded in 2007, we started as a trio of architects. Our complimentary skills and relentless attention to detail turned Arch into one of the most sought after boutique firms in the country.</p>
                         <p className={"font-primary text-xsm text-medium-gray"}>Specializing in Urban Design allowed us to focus on creating exceptional structures that live in harmony with their surroundings. We consider every detail from every surrounding element to inform our designs. </p>
                         <p className={"font-primary text-xsm text-medium-gray"}>Our small team of world-class professionals provides input on every project.</p>
                     </div>
 
-                    <div className={"hidden lg:block"}>
-                        <img src={Heritage} alt={Heritage}/>
+                    <div className={"hidden ls:block"}>
+                        <img className={"h-full"} src={Heritage} alt={"Heritage"}/>
                     </div>
                 </div>
 
