@@ -115,29 +115,34 @@ const Home = () => {
                 <div><hr className="w-1/3 container-in sm:mx-0 hidden" /></div>
 
                 <div className="container-in sm:mx-0 h-full flex justify-center items-center text-start">
+                    <div className="font-primary">
+                        <h1 className={" hidden md:block text-xl xl:text-[250px] ls:flex ls:items-start font-bold text-light-gray font-primary "}>Welcome</h1>
+                        <div  className={"ls:grid ls:grid-cols-[1fr_350px] space-x-8"}>
+                            <div className={"lg:max-w-[483px] space-y-8 ls:items-end"}>
+                                <h1 className="font-bold text-md">
+                                    Welcome to Arch Studio
+                                </h1>
+                                <p className="text-xsm">
+                                    We have a unique network and skillset to help bring your projects
+                                    to life. Our small team of highly skilled individuals combined
+                                    with our large network put us in a strong position to deliver
+                                    exceptional results.
+                                </p>
+                                <p className="text-xsm">
+                                    Over the past 10 years, we have worked on all kinds of projects.
+                                    From stations to high-rise buildings, we create spaces that
+                                    inspire and delight.
+                                </p>
+                                <p className="text-xsm">
+                                    We work closely with our clients so that we understand the
+                                    intricacies of each project. This allows us to work in harmony
+                                    with the surrounding area to create truly stunning projects that
+                                    will stand the test of time.
+                                </p>
+                            </div>
 
-                    <div className="space-y-10 font-primary">
-                        <h1 className={"hidden md:block text-xl mb-0 font-bold text-light-gray font-primary"}>Welcome</h1>
-                        <h1 className="font-bold text-md">
-                            Welcome to Arch Studio
-                        </h1>
-                        <p className="text-xsm">
-                            We have a unique network and skillset to help bring your projects
-                            to life. Our small team of highly skilled individuals combined
-                            with our large network put us in a strong position to deliver
-                            exceptional results.
-                        </p>
-                        <p className="text-xsm">
-                            Over the past 10 years, we have worked on all kinds of projects.
-                            From stations to high-rise buildings, we create spaces that
-                            inspire and delight.
-                        </p>
-                        <p className="text-xsm">
-                            We work closely with our clients so that we understand the
-                            intricacies of each project. This allows us to work in harmony
-                            with the surrounding area to create truly stunning projects that
-                            will stand the test of time.
-                        </p>
+                            <div><img src={"src/assets/images/welcome.svg"} alt={"welcome-image"} className={"hidden ls:block ls:max-w-[350px]"} /></div>
+                        </div>
                     </div>
                 </div>
 
