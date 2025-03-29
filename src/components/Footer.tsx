@@ -8,7 +8,7 @@ const Footer = () => {
     const navigate = useNavigate();
     return (
         <>
-            {/*MOBILE NAVBAR*/}
+            {/*MOBILE FOOTER*/}
             <footer className="max-w-[570px] mx-auto flex flex-col md:hidden pt-40 relative items-center font-primary ">
                 <div className="relative bg-light-gray pb-12 w-full flex justify-center">
                     <img
@@ -28,9 +28,9 @@ const Footer = () => {
                 </div>
             </footer>
 
-            {/*DESKTOP NAVBAR*/}
-            <footer className="max-w-[1440px] mx-auto mt-32 hidden md:flex w-screen justify-center">
-                <div className="flex w-screen max-w-screen-xl">
+            {/*DESKTOP FOOTER*/}
+            <footer className="max-w-[1440px] mx-auto mt-32 hidden md:flex w-full justify-center items-center">
+                <div className="flex w-full justify-center ">
                     <div className="flex w-5/6 bg-light-gray space-x-12 text-xsm text-medium-gray font-primary font-bold items-center">
                         <img src={archMobile} alt="arch-mobile" className="" />
                         <button className="hover:text-black whitespace-nowrap" onClick={() => navigate("/portfolio")}>Portfolio</button>

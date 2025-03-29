@@ -21,8 +21,8 @@ const itemVariants = {
 
 const About = () => {
     return (
-        <>
-            <div className="relative hidden md:flex">
+        <main className={"max-w-[1440px] w-full mx-auto relative"}>
+            <div className="hidden md:flex">
                 <div className="absolute top-0 left-12">
                     <hr className="top-0 left-16 w-[1px] h-24 bg-medium-gray transform translate-x-0 translate-y-0" />
 
@@ -44,7 +44,7 @@ const About = () => {
             <Navbar/>
 
             <div className={"relative md:px-24 md:mb-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440]"}>
-                <img src={"src/assets/images/about.svg"} alt="about" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] w-full object-cover md:max-w-[635px]"}/>
+                <img src={"src/assets/images/about.svg"} alt="about" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] max-h-[800px] w-full object-cover md:max-w-[635px]"}/>
                 <div className="md:hidden absolute z-10 bg-white h-[35px] w-full bottom-[-1px] right-[8%]"></div>
                 <div className={"hidden md:block absolute z-10 bg-white h-[450px] w-[500px] ls:h-[450px] ls:w-[600px] xl:w-[700px] xl:h-[500px] transition-all duration-300 bottom-0 right-[9%] xl:right-[20%]"}>
                     <div className={"hidden md:block absolute space-y-24 "}>
@@ -58,15 +58,15 @@ const About = () => {
                 </div>
             </div>
             <main className={"space-y-48 md:px-18 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440px]"}>
-                <div className={"md:hidden space-y-8 mx-4 relative"}>
+                <div className={"md:hidden space-y-8 mx-4 relative max-w-[450px]"}>
                     <h1 className={"font-primary font-bold text-[3rem] leading-[3.25rem] tracking-[1.2px]"}>Your team of professionals</h1>
                     <p className={"font-primary text-xsm text-medium-gray"}>Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.</p>
                 </div>
 
                 <hr className={"w-1/3 container-in md:px-0 mt-24 mb-24 md:hidden" }/>
 
-                <div className={"container-body h-full ls:grid ls:grid-cols-[1fr_1.3fr] ls:gap-2"}>
-                    <div className={"space-y-8 lg:space-y-5 h-full"}>
+                <div className={"container-body h-full ls:flex ls:justify-between"}>
+                    <div className={"space-y-8 lg:space-y-5 h-full ls:max-w-[446px] ls:items-center"}>
                         <h1 className={"font-primary font-bold text-md max-w-1/2"}>Our Heritage</h1>
                         <p className={"font-primary text-xsm text-medium-gray"}>Founded in 2007, we started as a trio of architects. Our complimentary skills and relentless attention to detail turned Arch into one of the most sought after boutique firms in the country.</p>
                         <p className={"font-primary text-xsm text-medium-gray"}>Specializing in Urban Design allowed us to focus on creating exceptional structures that live in harmony with their surroundings. We consider every detail from every surrounding element to inform our designs. </p>
@@ -87,7 +87,7 @@ const About = () => {
                             <p className={"text-xsm text-dark-gray"}>Chief Architect</p>
                         </div>
 
-                        <div className={"font-primary max-w-[350px] max-md:justify-self-end "}>
+                        <div className={"font-primary max-w-[350px] w-full max-md:justify-self-end "}>
                             <img src={"src/assets/images/thompson.svg"} alt={"Thompson"} className={"w-full"}/>
                             <h1 className={"text-sm font-bold"}>Thompson Smith</h1>
                             <p className={"text-xsm text-dark-gray"}>Head of finance</p>
@@ -99,7 +99,7 @@ const About = () => {
                             <p className={"text-xsm text-dark-gray"}>Lead Designer</p>
                         </div>
 
-                        <div className={"font-primary max-w-[350px] max-md:justify-self-end"}>
+                        <div className={"font-primary max-w-[350px] w-full max-md:justify-self-end"}>
                             <img src={"src/assets/images/Maria.svg"} alt={"Maria"} className={"w-full"}/>
                             <h1 className={"text-sm font-bold"}>Maria Simpson</h1>
                             <p className={"text-xsm text-dark-gray"}>Senior Architect</p>
@@ -108,7 +108,7 @@ const About = () => {
                 </div>
             </main>
             <Footer/>
-        </>
+        </main>
     )
 }
 export default About

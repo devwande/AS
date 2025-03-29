@@ -4,6 +4,11 @@ import {useNavigate} from "react-router-dom";
 import Footer from "../components/Footer";
 import Paramour from "../assets/images/paramour.webp";
 import {motion} from "framer-motion";
+import {useState} from "react";
+import ParamourPage from "../components/ParamourPage.tsx";
+import SeraphPage from "../components/SeraphPage.tsx";
+import FederalPage from "../components/FederalPage.tsx";
+import TrinityPage from "../components/TrinityPage.tsx";
 
 
 interface Project {
@@ -11,6 +16,7 @@ interface Project {
     name: string;
     src: string;
 }
+
 
 const projects: Project[] = [
     { id: 1, name: 'Project Del Sol', src: "src/assets/images/de-sol.webp" },
@@ -35,10 +41,18 @@ const itemVariants = {
 };
 
 const Home = () => {
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const pageOrder = ["example", "paramour", "seraph", "federal", "trinity"];
+
+    const advance = (index: number) => {
+        setCurrentPage(index);
+    };
+
     const navigate = useNavigate();
     return (
-        <>
-            <div className="relative hidden md:flex">
+        <main className={"max-w-[1440px] w-full mx-auto relative"}>
+            <div className="hidden md:flex">
                 <div className="absolute top-0 left-12">
                     <hr className="top-0 left-16 w-[1px] h-24 bg-medium-gray transform translate-x-0 translate-y-0" />
 
@@ -60,9 +74,9 @@ const Home = () => {
             <main className="max-w-[570px] mx-auto md:max-w-full xl:max-w-[1440px] space-y-20 md:px-24">
                 <div className=" font-primary">
                     {/*FIRST PAGE*/}
-                    <div className="h-[calc(100vh-98px)] md:h-[calc(100vh-135px)] relative">
-                        <img src={Paramour} alt="Paramour" className="absolute mx-auto inset-0 h-full w-full object-cover brightness-75"/>
-                        <div className="absolute inset-0 flex flex-col items-start justify-center space-y-6 pl-7 sm:pl-12">
+                    <div className="h-[calc(100vh-98px)] md:h-[calc(100vh-135px)] max-h-[800px] relative">
+                        <img src={Paramour} alt="Paramour" className="absolute mx-auto inset-0 h-full max-h-[800px] w-full object-cover brightness-75 lg:hidden"/>
+                        <div className="absolute inset-0 flex flex-col items-start justify-center space-y-6 pl-7 sm:pl-12 lg:hidden">
                             <h1 className="text-white text-md md:text-[96px] md:leading-[80px] max-w-[400px]">Project Paramour</h1>
                             <p className="text-white font-medium text-xsm max-w-[500px]">
                                 Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.
@@ -70,6 +84,30 @@ const Home = () => {
                             <button className="button mt-20 font-primary">
                                 See Our Portfolio <ArrowRight />
                             </button>
+                        </div>
+
+                        {/* DESKTOP VERSION */}
+                        <div className={"absolute mx-auto h-full max-h-[800px] w-full object-cover"}>
+                            {pageOrder[currentPage] === "paramour" && <ParamourPage />}
+                            {pageOrder[currentPage] === "seraph" && <SeraphPage />}
+                            {pageOrder[currentPage] === "federal" && <FederalPage />}
+                            {pageOrder[currentPage] === "trinity" && <TrinityPage />}
+                        </div>
+
+                        <div className="hidden lg:block absolute bg-white font-spartan text-xsm font-bold bottom-[0px] left-[-80px] ">
+                            {[1, 2, 3, 4].map((item, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => advance(item)}
+                                    className={`p-5 w-[80px] ${
+                                        currentPage === item
+                                            ? "bg-black text-white "
+                                            : "bg-white text-gray  hover:bg-light-gray"
+                                    }`}
+                                >
+                                    {`0${item}`}
+                                </button>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -104,7 +142,7 @@ const Home = () => {
                 </div>
 
                 <div className="relative space-y-10 h-full font-primary">
-                    <img src={"src/assets/images/smallTeam.svg"} alt="team" className="w-full mx-auto h-[calc(100vh-300px)] brightness-50" />
+                    <img src={"src/assets/images/smallTeam.svg"} alt="team" className="w-full mx-auto h-[calc(100vh-135px)] max-h-[800px]  brightness-50" />
                     <div className="absolute inset-0 flex flex-col items-start justify-center text-start container-in mx-10 md:mx-20 ls:mx-32 space-y-20 max-w-[350px]">
                         <h1 className="text-white text-md font-bold">
                             Small team, big ideas
@@ -157,7 +195,7 @@ const Home = () => {
 
             <Footer />
 
-        </>
+        </main>
     )
 }
 export default Home;

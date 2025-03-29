@@ -42,7 +42,7 @@ const Navbar = () => {
         <>
 
             <div className="flex justify-between relative md:hidden container-body sm:px-0 max-w-[570px] mx-auto">
-                <div><img src={arch} alt="Arch" /></div>
+                <div onClick={() => navigate("/")}><img src={arch} alt="Arch" /></div>
                 <div><motion.button
                     animate={mobileNav ? "open" : "closed"}
                     ref={buttonRef}
@@ -52,23 +52,23 @@ const Navbar = () => {
                     <motion.span
                         variants={{
                             closed: { rotate: 0, y: 0 },
-                            open: { rotate: 45, y: 8 },
+                            open: { rotate: 45, y: 10 },
                         }}
-                        className="w-7 h-0.5 bg-black block"
+                        className="w-7 h-[3px] bg-black block"
                     ></motion.span>
                     <motion.span
                         variants={{
                             closed: { opacity: 1 },
                             open: { opacity: 0 },
                         }}
-                        className="w-7 h-0.5 bg-black block"
+                        className="w-7 h-[3px] bg-black block"
                     ></motion.span>
                     <motion.span
                         variants={{
                             closed: { rotate: 0, y: 0 },
                             open: { rotate: -45, y: -8 },
                         }}
-                        className="w-7 h-0.5 bg-black block"
+                        className="w-7 h-[3px] bg-black block"
                     ></motion.span>
                 </motion.button>
                 </div>
@@ -164,7 +164,7 @@ const Navbar = () => {
             <main className={"max-w-[1440px] hidden md:block w-full mx-auto md:px-24 relative"}>
 
                 <div className="md:py-12 flex justify-start space-x-20 items-center  md:mx-0 mx-auto relative font-primary font-bold font-xsm text-medium-gray">
-                    <img src={"src/assets/icons/arch.svg"} alt="Arch" />
+                    <div onClick={() => navigate("/")}><img src={"src/assets/icons/arch.svg"} alt="Arch" /></div>
                     <button onClick={() => navigate("/portfolio")}>Portfolio</button>
                     <button onClick={() => navigate("/about")} className={"whitespace-nowrap"}>About Us</button>
                     <button onClick={() => navigate("/contact")}>Contact</button>
