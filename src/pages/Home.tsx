@@ -116,9 +116,10 @@ const Home = () => {
 
                 <div className="container-in sm:mx-0 h-full flex justify-center items-center text-start">
                     <div className="font-primary">
-                        <h1 className={" hidden md:block text-xl xl:text-[250px] ls:flex ls:items-start font-bold text-light-gray font-primary "}>Welcome</h1>
-                        <div  className={"ls:grid ls:grid-cols-[1fr_350px] space-x-8"}>
-                            <div className={"lg:max-w-[483px] space-y-8 ls:items-end"}>
+                        <div  className={"ls:grid ls:grid-cols-[1fr_350px] space-x-8 ls:pt-56 lg:pt-48"}>
+                            <div className={"lg:max-w-[483px] space-y-8 md:pt-24 ls:pt-10"}>
+                                <h1 className={"absolute hidden md:block text-xl xl:text-[250px]  md:top-[24%] ls:top-[28%]   lg:top-[27%] lg:left-1/12  font-bold text-light-gray font-primary"}>Welcome</h1>
+
                                 <h1 className="font-bold text-md">
                                     Welcome to Arch Studio
                                 </h1>
@@ -146,9 +147,9 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="relative space-y-10 h-full font-primary">
-                    <img src={"src/assets/images/smallTeam.svg"} alt="team" className="w-full mx-auto h-[calc(100vh-135px)] max-h-[800px]  brightness-50" />
-                    <div className="absolute inset-0 flex flex-col items-start justify-center text-start container-in mx-10 md:mx-20 ls:mx-32 space-y-20 max-w-[350px]">
+                <div className="relative space-y-10  max-h-[500px]  w-full font-primary">
+                    <img src={"src/assets/images/smallTeam.svg"} alt="team" className="w-full h-[500px] object-cover   brightness-50" />
+                    <div className="absolute inset-0 top-1/4 justify-center text-start container-in mx-10 md:mx-20 ls:mx-32 space-y-20 max-w-[350px]">
                         <h1 className="text-white text-md font-bold">
                             Small team, big ideas
                         </h1>
@@ -159,7 +160,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className={"flex justify-between"}>
+                <div className={"flex justify-between -space-y-10"}>
                     <h1 className="container-in sm:mx-0 text-md md:tracking-wide md:font-bold font-primary">Featured</h1>
                     <button className={"button  hidden sm:flex"}>
                         See All {""}
@@ -167,17 +168,17 @@ const Home = () => {
                     </button>
                 </div>
 
-                <div className="space-y-4 container-body sm:px-0 font-primary">
+                <div className="space-y-4 container-body sm:px-0 font-primary ls:grid ls:grid-cols-3 ls:gap-x-2 xl:gap-x-6 transition-all duration-300">
                     {projects.map((project) => (
-                        <div key={project.id} className="relative">
-                            <div className="relative h-64 w-full">
+                        <div key={project.id} className="relative  ">
+                            <div className="relative h-64 w-full  ls:h-[560px] ls:w-auto">
                                 <img
                                     src={project.src || "/placeholder.svg"}
                                     alt="projects"
                                     className="absolute w-full h-full object-cover"
                                 />
 
-                                <div className={"absolute inset-0 bg-black/30"}></div>
+                                <div className={"absolute inset-0 ls:h-auto bg-black/30"}></div>
 
                                 <div className={"absolute inset-0 flex justify-between"}>
                                     <div className=" flex flex-col justify-end p-6">
@@ -186,7 +187,7 @@ const Home = () => {
                                             View All Projects
                                         </a>
                                     </div>
-                                    <div className={"hidden md:block p-3 text-light-gray text-[250px] leading-[200px] font-bold font-primary"}><h1 className={"flex items-end"}>{project.id}</h1></div>
+                                    <div className={"ls:absolute md:block p-3 ls:-right-4 text-light-gray text-[250px] leading-[200px] font-bold font-primary "}><h1 className={"max-md:flex max-md:items-end"}>{project.id}</h1></div>
                                 </div>
                             </div>
                         </div>
@@ -196,9 +197,10 @@ const Home = () => {
                         <ArrowRight className="ml-5"  />
                 </button>
                 </div>
+                <div className={"space-y-0"}><Footer /></div>
             </main>
 
-            <Footer />
+
 
         </main>
     )

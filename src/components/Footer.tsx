@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <>
             {/*MOBILE FOOTER*/}
-            <footer className="max-w-[570px] mx-auto flex flex-col md:hidden pt-40 relative items-center font-primary ">
+            <footer className="max-w-[686px] mx-auto flex flex-col ls:hidden pt-40 relative items-center font-primary">
                 <div className="relative bg-light-gray pb-12 w-full flex justify-center">
                     <img
                         src={archMobile}
@@ -29,18 +29,18 @@ const Footer = () => {
             </footer>
 
             {/*DESKTOP FOOTER*/}
-            <footer className="max-w-[1440px] mx-auto mt-32 hidden md:flex w-full justify-center items-center">
-                <div className="flex w-full justify-center ">
-                    <div className="flex w-5/6 bg-light-gray space-x-12 text-xsm text-medium-gray font-primary font-bold items-center">
+            <footer className=" hidden ls:flex justify-center  ">
+                <div className="flex w-full max-w-[1440px] mt-32">
+                    <div className="flex w-full min-w-[85%] max-w-[1300px] bg-light-gray space-x-10 text-xsm text-medium-gray font-primary font-bold items-center">
                         <img src={archMobile} alt="arch-mobile" className="" />
                         <button className="hover:text-black whitespace-nowrap" onClick={() => navigate("/portfolio")}>Portfolio</button>
                         <button className="hover:text-black whitespace-nowrap" onClick={() => navigate("/about")}>About Us</button>
                         <button className="hover:text-black whitespace-nowrap" onClick={() => navigate("/contact")}>Contact</button>
                     </div>
 
-                    <div className="flex w-1/6 items-center -translate-x-20">
+                    <div className="flex w-[30%] items-center -translate-x-28">
                         <button
-                            className="border flex font-bold border-black bg-black text-white px-6 py-5 gap-x-5 font-primary items-center justify-center whitespace-nowrap"
+                            className="border flex font-bold border-black w-full bg-black text-white px-6 py-5 gap-x-5 font-primary items-center justify-center whitespace-nowrap"
                             onClick={() => navigate("/portfolio")}
                         >
                             See our Portfolio
