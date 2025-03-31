@@ -63,13 +63,13 @@ const Portfolio = () => {
 
             <Navbar />
 
-            <div className={"grid grid-cols-1 ls:grid-cols-3 ls:space-x-2 xl:space-x-6 ls:space-y-3 space-y-6 md:px-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440] transition-all duration-300"}>
+            <div className={"grid grid-cols-1 ls:grid-cols-2 lg:grid-cols-3 ls:space-x-4 lg:space-x-4 xl:space-x-6 ls:space-y-3 space-y-6 md:px-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440] transition-all duration-300"}>
                 {projects.map((project, index) => (
                     <PortfolioProjects key={index} src={project.src} label={project.label} date={project.date} alt={project.label} />
                 ))}
             </div>
 
-            <Footer />
+            <div className={"space-y-0 max-w-[570px] mx-auto md:max-w-full xl:max-w-[1440px] md:px-24"}><Footer /></div>
         </main>
     )
 }

@@ -114,64 +114,55 @@ const Home = () => {
 
                 <div><hr className="w-1/3 container-in sm:mx-0 hidden" /></div>
 
-                <div className="container-in sm:mx-0 h-full flex justify-center items-center text-start">
-                    <div className="font-primary">
-                        <div  className={"ls:grid ls:grid-cols-[1fr_350px] space-x-8 ls:pt-56 lg:pt-48"}>
-                            <div className={"lg:max-w-[483px] space-y-8 md:pt-24 ls:pt-10"}>
-                                <h1 className={"absolute hidden md:block text-xl xl:text-[250px]  md:top-[24%] ls:top-[28%]   lg:top-[27%] lg:left-1/12  font-bold text-light-gray font-primary"}>Welcome</h1>
-
-                                <h1 className="font-bold text-md">
-                                    Welcome to Arch Studio
-                                </h1>
-                                <p className="text-xsm">
-                                    We have a unique network and skillset to help bring your projects
-                                    to life. Our small team of highly skilled individuals combined
-                                    with our large network put us in a strong position to deliver
-                                    exceptional results.
-                                </p>
-                                <p className="text-xsm">
-                                    Over the past 10 years, we have worked on all kinds of projects.
-                                    From stations to high-rise buildings, we create spaces that
-                                    inspire and delight.
-                                </p>
-                                <p className="text-xsm">
-                                    We work closely with our clients so that we understand the
-                                    intricacies of each project. This allows us to work in harmony
-                                    with the surrounding area to create truly stunning projects that
-                                    will stand the test of time.
-                                </p>
-                            </div>
-
-                            <div><img src={"src/assets/images/welcome.svg"} alt={"welcome-image"} className={"hidden ls:block ls:max-w-[350px]"} /></div>
+                <section className="relative max-w-[570px] md:max-w-[1440px] mx-auto font-primary my-[76px] md:my-[120px] lg:my-[145px] xl:my-[190px] px-6 text-dark-gray sm:px-1 grid ld:grid-cols-[1fr_350px] ld:gap-20 xl:gap-32 transition-all duration-300">
+                    <div className=""><p className="absolute font-bold tracking-[-0.125rem] leading-[-8.5rem] text-[clamp(8.5rem,15.5vw+1rem,16rem)] text-light-gray opacity-50 hidden md:block -top-[6rem] ls:-top-[7.5rem] lg:-top-[10rem] xl:-top-[12.5rem]">Welcome</p>
+                        <div className="border-[0.5px] border-dark-gray opacity-70 w-[65px] absolute left-[1.5rem] md:hidden"></div>
+                        <div className="ld:ml-auto min-w-[500px] max-w-[572px] ls:max-w-[700px] lg:max-w-[445px]"><h2 className="text-[clamp(3rem,9.14vw+1rem,4.2rem)] text-dark-blue leading-[clamp(3.25rem,10.3vw+1.2rem,4.3rem)] font-[800] tracking-[0.075rem] whitespace-nowrap pb-8 pt-[4.125rem]">Welcome to <br/> Arch Studio</h2></div>
+                        <div className="ld:ml-auto grid gap-6 min-w-[500px] max-w-[572px] ls:max-w-[700px] lg:max-w-[700px] ld:max-w-[445px] md:text-[1.125rem]">
+                            <p >We have a unique
+                                network and skillset to help bring your projects to life. Our small team of
+                                highly skilled individuals combined with our large network put us in a
+                                strong position to deliver exceptional results.</p>
+                            <p>Over the past 10 years, we have worked on all kinds of projects. From stations to high-rise
+                            buildings, we create spaces that inspire and delight.</p>
+                            <p>We work closely with our clients so that we understand the intricacies of each project. This
+                            allows us to work in harmony the surrounding area to create truly stunning
+                            projects that will stand the test of time.</p>
                         </div>
                     </div>
-                </div>
+                    <div className="h-full max-w-[350px] mr-[-0.35rem] hidden ld:block">
+                        <img src={"src/assets/images/welcome.svg"} alt={"welcome-image"}/>
+                    </div>
+                </section>
 
                 <div className="relative space-y-10  max-h-[500px]  w-full font-primary">
-                    <img src={"src/assets/images/smallTeam.svg"} alt="team" className="w-full h-[500px] object-cover   brightness-50" />
-                    <div className="absolute inset-0 top-1/4 justify-center text-start container-in mx-10 md:mx-20 ls:mx-32 space-y-20 max-w-[350px]">
+                    <img src={"src/assets/images/smallTeam.svg"} alt="team"
+                         className="w-full h-[500px] object-cover   brightness-50"/>
+                    <div
+                        className="absolute inset-0 top-1/4 justify-center text-start container-in mx-10 md:mx-20 ls:mx-32 space-y-20 max-w-[350px]">
                         <h1 className="text-white text-md font-bold">
                             Small team, big ideas
                         </h1>
                         <button className="button">
                             About us {""}
-                            <ArrowRight  />
+                            <ArrowRight/>
                         </button>
                     </div>
                 </div>
 
-                <div className={"flex justify-between -space-y-10"}>
+                <div className={"flex justify-between"}>
                     <h1 className="container-in sm:mx-0 text-md md:tracking-wide md:font-bold font-primary">Featured</h1>
                     <button className={"button  hidden sm:flex"}>
                         See All {""}
-                        <ArrowRight />
+                        <ArrowRight/>
                     </button>
                 </div>
 
-                <div className="space-y-4 container-body sm:px-0 font-primary ls:grid ls:grid-cols-3 ls:gap-x-2 xl:gap-x-6 transition-all duration-300">
+                <div
+                    className="space-y-4 container-body sm:px-0 font-primary ls:grid ls:grid-cols-3 ls:gap-x-2 xl:gap-x-6 transition-all duration-300">
                     {projects.map((project) => (
                         <div key={project.id} className="relative  ">
-                            <div className="relative h-64 w-full  ls:h-[560px] ls:w-auto">
+                            <div className="relative h-64 w-full ls:h-[650px] ls:w-auto">
                                 <img
                                     src={project.src || "/placeholder.svg"}
                                     alt="projects"

@@ -64,6 +64,7 @@
         --breakpoint-md: 768px;
         --breakpoint-ls: 900px;
         --breakpoint-lg: 1024px;
+        --breakpoint-ld: 1140px;
         --breakpoint-xl: 1280px;
 
         --font-primary: "League Spartan", "sans-serif";

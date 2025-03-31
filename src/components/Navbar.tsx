@@ -105,7 +105,7 @@ const Navbar = () => {
                             animate="open"
                             exit="closed"
                             ref={menuRef}
-                            className="md:hidden space-y-20 h-1/2 flex flex-col fixed right-0 w-5/6 bg-light-gray py-10 z-20"
+                            className="md:hidden space-y-20 h-1/2 max-h-[600px] flex flex-col fixed right-0 w-5/6 bg-light-gray py-10 z-20"
                         >
                             <motion.button
                                 variants={{

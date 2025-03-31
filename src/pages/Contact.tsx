@@ -126,7 +126,7 @@ const Contact = () => {
                     </div>
                 </div>
             </main>
-            <Footer />
+            <div className={"space-y-0 max-w-[570px] mx-auto md:max-w-full xl:max-w-[1440px] md:px-24"}><Footer /></div>
             </main>
     )
 }
