@@ -114,15 +114,13 @@ const Home = () => {
 
                 <div><hr className="w-1/3 container-in sm:mx-0 hidden" /></div>
 
-                <section className="relative max-w-[570px] md:max-w-[1440px] mx-auto font-primary my-[76px] md:my-[120px] lg:my-[145px] xl:my-[190px] px-6 text-dark-gray sm:px-1 grid ld:grid-cols-[1fr_350px] ld:gap-20 xl:gap-32 transition-all duration-300">
+                <section className="relative container-body max-w-[570px] md:max-w-[1440px] mx-auto font-primary my-[76px] md:my-[120px] lg:my-[145px] xl:my-[190px] px-6 text-dark-gray sm:px-1 grid ld:grid-cols-[1fr_350px] ld:gap-20 xl:gap-32 transition-all duration-300">
                     <div className=""><p className="absolute font-bold tracking-[-0.125rem] leading-[-8.5rem] text-[clamp(8.5rem,15.5vw+1rem,16rem)] text-light-gray opacity-50 hidden md:block -top-[6rem] ls:-top-[7.5rem] lg:-top-[10rem] xl:-top-[12.5rem]">Welcome</p>
                         <div className="border-[0.5px] border-dark-gray opacity-70 w-[65px] absolute left-[1.5rem] md:hidden"></div>
-                        <div className="ld:ml-auto min-w-[500px] max-w-[572px] ls:max-w-[700px] lg:max-w-[445px]"><h2 className="text-[clamp(3rem,9.14vw+1rem,4.2rem)] text-dark-blue leading-[clamp(3.25rem,10.3vw+1.2rem,4.3rem)] font-[800] tracking-[0.075rem] whitespace-nowrap pb-8 pt-[4.125rem]">Welcome to <br/> Arch Studio</h2></div>
-                        <div className="ld:ml-auto grid gap-6 min-w-[500px] max-w-[572px] ls:max-w-[700px] lg:max-w-[700px] ld:max-w-[445px] md:text-[1.125rem]">
-                            <p >We have a unique
-                                network and skillset to help bring your projects to life. Our small team of
-                                highly skilled individuals combined with our large network put us in a
-                                strong position to deliver exceptional results.</p>
+                        <div className="ld:ml-auto ld:min-w-[500px] max-w-[572px] ls:max-w-[700px] lg:max-w-[445px]"><h2 className="text-[clamp(3rem,9.14vw+1rem,4.2rem)] text-dark-blue leading-[clamp(3.25rem,10.3vw+1.2rem,4.3rem)] font-[800] tracking-[0.075rem] whitespace-nowrap pb-8 pt-[4.125rem]">Welcome to <br/> Arch Studio</h2></div>
+                        <div className="ld:ml-auto grid gap-6 ld:min-w-[500px] max-w-[572px] ls:max-w-[700px] lg:max-w-[700px] ld:max-w-[445px] md:text-[1.125rem]">
+                            <p >We have a unique network and skillset to help bring your projects to life. Our small team of
+                                highly skilled individuals combined with our large network put us in a strong position to deliver exceptional results.</p>
                             <p>Over the past 10 years, we have worked on all kinds of projects. From stations to high-rise
                             buildings, we create spaces that inspire and delight.</p>
                             <p>We work closely with our clients so that we understand the intricacies of each project. This

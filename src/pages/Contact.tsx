@@ -56,14 +56,14 @@ const Contact = () => {
             <Navbar />
 
             <div className={"relative md:px-24 md:mb-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440]"}>
-                <img src={"src/assets/images/telephone.svg"} alt="Contact-us" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] max-h-[720px] w-full object-cover md:max-w-[635px]"}/>
+                <img src={"src/assets/images/telephone.svg"} alt="Contact-us" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] max-h-[780px] w-full object-cover object-right-bottom  md:max-w-[650px]"}/>
                 <div className="md:hidden absolute z-10 bg-white h-[35px] w-full bottom-[-1px] right-[8%]"></div>
-                <div className={"hidden md:block absolute z-10 bg-white h-[450px] w-[500px] ls:h-[450px] ls:w-[600px] xl:w-[700px] xl:h-[500px] transition-all duration-300 bottom-0 right-[9%] xl:right-[20%]"}>
-                    <div className={"hidden md:block absolute space-y-24"}>
-                        <div><h1 className={"font-primary absolute -top-[25%] right-0 text-xl font-bold text-light-gray"}>Contact</h1></div>
+                <div className={"hidden md:block absolute mr-auto z-10 bg-white h-[450px] w-[500px] ls:h-[450px] ls:w-[600px] xl:w-[700px] xl:h-[500px] transition-all duration-300 bottom-0 right-[9%] xl:right-[10%]"}>
+                    <div className={"hidden md:block absolute space-y-28 "}>
+                        <div><h1 className={"font-primary absolute -top-[25%] right-0 ls:right-5 ls:-top-[35%] font-bold text-light-gray text-[clamp(8.5rem,15.5vw+1.3rem,12.635rem)] tracking-[0.125rem]"}>Contact</h1></div>
                         <hr className={"w-1/5 ml-12"}/>
-                        <div className={"ml-12 space-y-4"}>
-                            <h1 className={"font-primary font-bold text-6xl"}>Tell us about your project</h1>
+                        <div className={"ml-12 space-y-4 xl:space-y-8 md:mr-auto"}>
+                            <h1 className={"font-primary font-bold text-[4.5rem] leading-[64px]"}>Tell us about <br/>your project</h1>
                             <p className={"font-primary text-xsm text-medium-gray"}>We’d love to hear more about your project. Please, leave a message below or give us a call. We have two offices, one in Texas and one in Tennessee. If you find yourself nearby, come say hello!</p>
                         </div>
                     </div>
@@ -71,21 +71,21 @@ const Contact = () => {
             </div>
             <main className={"space-y-48 md:px-18 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440px]"}>
                 <div className={"md:hidden container-body space-y-8"}>
-                    <h1 className={"font-primary font-bold text-6xl"}>Tell us about your project</h1>
+                    <h1 className={"font-primary font-bold text-6xl"}>Tell us about <br />your project</h1>
                     <p className={"font-primary text-xsm text-medium-gray"}>We’d love to hear more about your project. Please, leave a message below or give us a call. We have two offices, one in Texas and one in Tennessee. If you find yourself nearby, come say hello!</p>
                 </div>
 
                 <hr className={"w-1/3 container-in mt-24 mb-20 md:hidden" }/>
 
-                <div className={"container-body space-y-16 ls:grid ls:grid-cols-[1fr1_1.5fr] ls:gap-48 w-full"}>
-                    <div><h1 className={"font-primary font-bold text-md max-w-1/2"}>Contact Details</h1></div>
+                <div className={"container-body space-y-16 ld:grid ld:grid-cols-[0.8fr_1.5fr] ls:gap-48 w-full"}>
+                    <div><h1 className={"font-primary text-[clamp(3rem,9.14vw+1rem,4.2rem)] text-dark-blue leading-[1.05] font-[800] tracking-[0.075rem] pb-4 whitespace-nowrap "}>Contact <br/> Details</h1></div>
 
-                    <div className={"space-y-8 md:grid md:grid-cols-2 md:gap-6"}>
+                    <div className={"space-y-8 md:grid md:grid-cols-2 md:gap-16"}>
                         {contact.map(contact => (
-                            <div className={"text-xsm font-primary space-y-8"}>
+                            <div className={"text-xsm font-primary space-y-8 whitespace-nowrap md:ml-auto"}>
                                 <div className={"text-light-gray font-bold"}>{contact.office}</div>
 
-                                <div className={"space-y-8 md:flex md:justify-between md:flex-col md:space-y-16"}>
+                                <div className={"space-y-8 sm:grid sm:grid-cols-2 sm:gap-x-48 md:grid-cols-1 w-fit "}>
                                     <div>
                                         <p>Mail: {contact.mail}</p>
                                         <p>Address: {contact.address}</p>
@@ -104,9 +104,9 @@ const Contact = () => {
                 <img src={"src/assets/images/Maps.svg"} alt={"Maps"} className={"w-full object-cover transition-all duration-300 h-[400px]"} />
 
                 <div className={"container-body ls:grid ls:grid-cols-[1fr_1.5fr]"}>
-                    <div><h1 className={"font-primary font-bold text-md pb-20 max-w-3/4"}>Connect with us</h1></div>
+                    <div><h1 className={"font-primary font-bold text-md pb-20 "}>Connect <br/>with us</h1></div>
 
-                    <div className={"container-body "}>
+                    <div className={"container-body"}>
                         <form className={""}>
                             <div className={"flex flex-col gap-y-12"}>
                                 <input type={"text"} id={"name"} placeholder={"Name"} className={"px-4 focus:outline-hidden text-black placeholder:font-primary placeholder:text-2xl placeholder:font-bold placeholder:text-medium-gray"}/>
