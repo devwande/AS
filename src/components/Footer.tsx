@@ -40,7 +40,7 @@ const Footer = () => {
 
                     <div className="flex w-[30%] items-center -translate-x-28">
                         <button
-                            className="border flex font-bold border-black w-full bg-black text-white px-6 py-5 gap-x-5 font-primary items-center justify-center whitespace-nowrap"
+                            className="border flex font-bold border-black w-full bg-black text-white px-6 py-5 gap-x-5 font-primary items-center justify-center whitespace-nowrap "
                             onClick={() => navigate("/portfolio")}
                         >
                             See our Portfolio

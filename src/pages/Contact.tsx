@@ -34,7 +34,7 @@ const contact: ContactProps[] = [
 const Contact = () => {
     return (
         <main className={"max-w-[1440px] w-full mx-auto relative"}>
-            <div className="hidden md:flex">
+            <section className="hidden md:flex">
                 <div className="absolute top-0 left-12">
                     <hr className="top-0 left-16 w-[1px] h-24 bg-medium-gray transform translate-x-0 translate-y-0" />
 
@@ -51,11 +51,11 @@ const Contact = () => {
                         ))}
                     </motion.div>
                 </div>
-            </div>
+            </section>
 
             <Navbar />
 
-            <div className={"relative md:px-24 md:mb-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440]"}>
+            <section className={"relative md:px-24 md:mb-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440]"}>
                 <img src={"src/assets/images/telephone.svg"} alt="Contact-us" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] max-h-[780px] w-full object-cover object-right-bottom  md:max-w-[650px]"}/>
                 <div className="md:hidden absolute z-10 bg-white h-[35px] w-full bottom-[-1px] right-[8%]"></div>
                 <div className={"hidden md:block absolute mr-auto z-10 bg-white h-[450px] w-[500px] ls:h-[450px] ls:w-[600px] xl:w-[700px] xl:h-[500px] transition-all duration-300 bottom-0 right-[9%] xl:right-[10%]"}>
@@ -68,8 +68,9 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <main className={"space-y-48 md:px-18 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440px]"}>
+            </section>
+
+            <main className={"space-y-12 md:px-18 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440px]"}>
                 <div className={"md:hidden container-body space-y-8"}>
                     <h1 className={"font-primary font-bold text-6xl"}>Tell us about <br />your project</h1>
                     <p className={"font-primary text-xsm text-medium-gray"}>We’d love to hear more about your project. Please, leave a message below or give us a call. We have two offices, one in Texas and one in Tennessee. If you find yourself nearby, come say hello!</p>
@@ -107,7 +108,7 @@ const Contact = () => {
                     <div><h1 className={"font-primary font-bold text-md pb-20 "}>Connect <br/>with us</h1></div>
 
                     <div className={"container-body"}>
-                        <form className={""}>
+                        <form className={"font-primary text-2xl"}>
                             <div className={"flex flex-col gap-y-12"}>
                                 <input type={"text"} id={"name"} placeholder={"Name"} className={"px-4 focus:outline-hidden text-black placeholder:font-primary placeholder:text-2xl placeholder:font-bold placeholder:text-medium-gray"}/>
                                 <hr className="border-t-[3px]" />

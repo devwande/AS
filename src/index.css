@@ -18,7 +18,7 @@
     }
 
     .button {
-        @apply border flex font-bold border-black bg-black text-white px-16 py-5 gap-x-3
+        @apply border flex font-bold border-black bg-black text-white px-16 py-5 gap-x-3 hover:bg-medium-gray hover:border-medium-gray
     }
     .text-dark-blue{
         color: var(--color-dark-blue);

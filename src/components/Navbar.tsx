@@ -2,6 +2,7 @@ import arch from "../assets/icons/arch.svg"
 import {motion, useCycle, AnimatePresence, MotionConfig} from "framer-motion";
 import {useRef, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
+import NavLink from "./NavLink.tsx";
 
 const Navbar = () => {
 
@@ -161,15 +162,14 @@ const Navbar = () => {
             </AnimatePresence>
 
             {/* DESKTOP NAVBAR */}
-            <main className={"max-w-[1440px] hidden md:block w-full mx-auto md:px-24 relative"}>
-
-                <div className="md:py-12 flex justify-start space-x-20 items-center  md:mx-0 mx-auto relative font-primary font-bold font-xsm text-medium-gray">
+            <motion.main className={"max-w-[1440px] hidden md:block w-full mx-auto md:px-24 relative"}>
+                <motion.div className="md:py-12 flex justify-start space-x-20 items-center md:mx-0 mx-auto relative font-primary font-bold text-[20px] text-medium-gray">
                     <div onClick={() => navigate("/")}><img src={"src/assets/icons/arch.svg"} alt="Arch" /></div>
-                    <button onClick={() => navigate("/portfolio")}>Portfolio</button>
-                    <button onClick={() => navigate("/about")} className={"whitespace-nowrap"}>About Us</button>
-                    <button onClick={() => navigate("/contact")}>Contact</button>
-                </div>
-            </main>
+                    <NavLink to={"/portfolio"}>Portfolio</NavLink>
+                    <NavLink to="/about" className={"whitespace-nowrap"}>About Us</NavLink>
+                    <NavLink to="/contact">Contact</NavLink>
+                </motion.div>
+            </motion.main>
         </>
     )
 }

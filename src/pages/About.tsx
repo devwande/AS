@@ -22,7 +22,7 @@ const itemVariants = {
 const About = () => {
     return (
         <main className={"max-w-[1440px] w-full mx-auto relative"}>
-            <div className="hidden md:flex">
+            <section className="hidden md:flex">
                 <div className="absolute top-0 left-12">
                     <hr className="top-0 left-16 w-[1px] h-24 bg-medium-gray transform translate-x-0 translate-y-0" />
 
@@ -39,7 +39,7 @@ const About = () => {
                         ))}
                     </motion.div>
                 </div>
-            </div>
+            </section>
 
             <Navbar/>
 
@@ -57,13 +57,14 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <main className={"space-y-48 md:px-18 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440px]"}>
+
+            <main className={"space-y-12 md:px-18 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440px]"}>
                 <div className={"md:hidden space-y-8 mx-4 relative max-w-[450px]"}>
                     <h1 className={"font-primary font-bold text-[3rem] leading-[3.25rem] tracking-[1.2px]"}>Your team of professionals</h1>
                     <p className={"font-primary text-xsm text-medium-gray"}>Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.</p>
                 </div>
 
-                <hr className={"w-1/3 container-in md:px-0 mt-24 mb-24 md:hidden" }/>
+                <div><hr className={"w-1/3 container-in md:px-0  md:hidden" }/></div>
 
                 <section className={"container-body h-full mx-auto"}>
                     <div className="hidden md:block w-[104px] bg-black h-[1px] ml-[25px] md:ml-0"></div>
@@ -93,7 +94,7 @@ const About = () => {
 
                 <div className={"container-body space-y-12 md:gap-y-20 lg:grid lg:grid-cols-[1fr_1.5fr] lg:gap-6"}>
                     <div className={""}><h1 className={"font-primary font-bold text-md "}>The <br/>Leaders</h1></div>
-                    <div className={"space-y-12 md:grid md:grid-cols-2 md:gap-3"}>
+                    <div className={"space-y-12 md:grid md:grid-cols-2 md:gap-3 "}>
                         <div className={"font-primary max-w-[350px]"}>
                             <img src={"src/assets/images/Jake.svg"} alt={"Jake"} className={"w-full"}/>
                             <h1 className={"text-sm font-bold"}>Jake Richards</h1>
