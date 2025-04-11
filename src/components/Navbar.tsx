@@ -1,4 +1,5 @@
-import arch from "../assets/icons/arch.svg"
+import arch from "../assets/icons/arch.svg";
+import ArchDs from "../assets/icons/arch.svg";
 import {motion, useCycle, AnimatePresence, MotionConfig} from "framer-motion";
 import {useRef, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
@@ -164,7 +165,7 @@ const Navbar = () => {
             {/* DESKTOP NAVBAR */}
             <motion.main className={"max-w-[1440px] hidden md:block w-full mx-auto md:px-24 relative"}>
                 <motion.div className="md:py-12 flex justify-start space-x-20 items-center md:mx-0 mx-auto relative font-primary font-bold text-[20px] text-medium-gray">
-                    <div onClick={() => navigate("/")}><img src={"src/assets/icons/arch.svg"} alt="Arch" /></div>
+                    <div onClick={() => navigate("/")}><img src={ArchDs} alt="Arch" /></div>
                     <NavLink to={"/portfolio"}>Portfolio</NavLink>
                     <NavLink to="/about" className={"whitespace-nowrap"}>About Us</NavLink>
                     <NavLink to="/contact">Contact</NavLink>

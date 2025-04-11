@@ -32,7 +32,6 @@ const itemVariants = {
 
 const Portfolio = () => {
     useEffect(() => {
-        // Initialize AOS
         AOS.init({
             duration: 800,
             easing: "ease-out-cubic",
@@ -91,7 +90,9 @@ const Portfolio = () => {
             </div>
 
             <div className={"space-y-0 max-w-[570px] mx-auto md:max-w-full xl:max-w-[1440px] md:px-24"}>
-                <Footer />
+
+            <Footer />
+
             </div>
         </main>
     )

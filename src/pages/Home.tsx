@@ -9,19 +9,23 @@ import ParamourPage from "../components/ParamourPage.tsx";
 import SeraphPage from "../components/SeraphPage.tsx";
 import FederalPage from "../components/FederalPage.tsx";
 import TrinityPage from "../components/TrinityPage.tsx";
-
+import DeSol from "../assets/images/de-sol.webp";
+import Tower from "../assets/images/228B.svg";
+import Prototype from "../assets/images/prototype.svg";
+import Welcome from "../assets/images/welcome.svg";
+import smallTeam from "../assets/images/smallTeam.svg";
 
 interface Project {
     id: number;
     name: string;
-    src: string;
+    src?: string;
 }
 
 
 const projects: Project[] = [
-    { id: 1, name: 'Project Del Sol', src: "src/assets/images/de-sol.webp" },
-    { id: 2, name: '228B Tower', src: "src/assets/images/228B.svg" },
-    { id: 3, name: 'Le Prototype', src: "src/assets/images/prototype.svg" },
+    { id: 1, name: 'Project Del Sol', src:DeSol },
+    { id: 2, name: '228B Tower', src:Tower },
+    { id: 3, name: 'Le Prototype', src:Prototype },
 ];
 
 const containerVariants = {
@@ -145,12 +149,12 @@ const Home = () => {
                         </div>
                     </div>
                     <div data-aos={"zoom-in"} data-aos-delay={"600"} className="z-0 h-full max-w-[350px] mr-[-0.35rem] hidden ld:block">
-                        <img src={"src/assets/images/welcome.svg"} alt={"welcome-image"}/>
+                        <img src={Welcome} alt={"welcome-image"}/>
                     </div>
                 </motion.section>
 
                 <section className="relative space-y-10  max-h-[500px]  w-full font-primary">
-                    <img src={"src/assets/images/smallTeam.svg"} alt="team"
+                    <img src={smallTeam} alt="team"
                          className="w-full h-[500px] object-cover brightness-50"/>
                     <div
                         className="absolute inset-0 top-1/4 justify-center text-start container-in mx-10 md:mx-20 ls:mx-32 space-y-20 max-w-[350px]">
