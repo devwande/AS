@@ -2,8 +2,7 @@ import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 import PortfolioProjects from "../components/PortfolioProjects.tsx";
 import {motion} from "framer-motion";
-// import {useEffect} from "react";
-// import "aos/dist/aos.css";
+
 
 interface Portfolio {
     label: string;
@@ -46,7 +45,7 @@ const Portfolio = () => {
         {src: "src/assets/images/paramour.webp", label: "Project Paramour", date: "February 2008"},
     ]
     return (
-        <main data-aos={""} className={"max-w-[1440px] w-full mx-auto relative"}>
+        <main className={"max-w-[1440px] w-full mx-auto relative"}>
             <div className=" hidden md:flex ">
                 <div className="absolute top-0 left-12">
                     <hr className="top-0 left-16 w-[1px] h-24 bg-medium-gray transform translate-x-0 translate-y-0" />
@@ -68,11 +67,11 @@ const Portfolio = () => {
 
             <Navbar />
 
-            <motion.div className={"grid grid-cols-1 ls:grid-cols-2 lg:grid-cols-3 ls:space-x-4 lg:space-x-4 xl:space-x-6 xl:space-y-6 ls:space-y-3 space-y-6 md:px-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440] transition-all duration-300"}>
+            <div className={"grid grid-cols-1 ls:grid-cols-2 lg:grid-cols-3 ls:space-x-4 lg:space-x-4 xl:space-x-6 xl:space-y-6 ls:space-y-3 space-y-6 md:px-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440] transition-all duration-300"}>
                 {projects.map((project, index) => (
                     <PortfolioProjects key={index} src={project.src} label={project.label} date={project.date} alt={project.label} />
                 ))}
-            </motion.div>
+            </div>
 
             <div className={"space-y-0 max-w-[570px] mx-auto md:max-w-full xl:max-w-[1440px] md:px-24"}><Footer /></div>
         </main>
