@@ -7,6 +7,8 @@ import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import AOS from "aos"
 import "aos/dist/aos.css"
+import Telephone from "../assets/images/telephone.svg";
+import Maps from "../assets/images/Maps.svg";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -72,7 +74,7 @@ const Contact = () => {
 
             <section className={"relative md:px-24 md:mb-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440]"}>
                 <img
-                    src={"src/assets/images/telephone.svg"}
+                    src={Telephone}
                     alt="Contact-us"
                     className={
                         "h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] max-h-[780px] w-full object-cover object-right-bottom md:max-w-[650px]"
@@ -185,7 +187,7 @@ const Contact = () => {
                 </div>
 
                 <img
-                    src={"src/assets/images/Maps.svg"}
+                    src={Maps}
                     alt={"Maps"}
                     className={"w-full object-cover transition-all duration-300 h-[400px]"}
                     data-aos="zoom-in"

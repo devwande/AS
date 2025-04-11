@@ -7,6 +7,11 @@ import Heritage from "../assets/images/heritage.svg"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import {motion} from "framer-motion";
+import AboutImage from "../assets/images/about.svg";
+import Jake from "../assets/images/Jake.svg";
+import Thompson from "../assets/images/thompson.svg";
+import Jackson from "../assets/images/jackson.svg";
+import Maria from "../assets/images/Maria.svg";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -58,15 +63,7 @@ const About = () => {
             <Navbar />
 
             <div className={"relative md:px-24 md:mb-24 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440]"}>
-                <img
-                    src={"src/assets/images/about.svg"}
-                    alt="about"
-                    className={
-                        "h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] max-h-[800px] w-full object-cover md:max-w-[635px]"
-                    }
-                    data-aos="fade-in"
-                    data-aos-duration="1200"
-                />
+                <img src={AboutImage} alt="about" className={"h-[250px] inset-0 brightness-50 md:h-[calc(100vh-135px)] max-h-[800px] w-full object-cover md:max-w-[635px]"} data-aos="fade-in" data-aos-duration="1200" />
                 <div className="md:hidden absolute z-10 bg-white h-[35px] w-full bottom-[-1px] right-[8%]"></div>
                 <div
                     className={
@@ -172,7 +169,7 @@ const About = () => {
                     </div>
                     <div className={"space-y-12 md:grid md:grid-cols-2 md:gap-3 "}>
                         <div className={"font-primary max-w-[350px]"} data-aos="fade-up" data-aos-duration="800">
-                            <img src={"src/assets/images/Jake.svg"} alt={"Jake"} className={"w-full"} />
+                            <img src={Jake} alt={"Jake"} className={"w-full"} />
                             <h1 className={"text-sm font-bold"}>Jake Richards</h1>
                             <p className={"text-xsm text-dark-gray"}>Chief Architect</p>
                         </div>
@@ -183,7 +180,7 @@ const About = () => {
                             data-aos-duration="800"
                             data-aos-delay="100"
                         >
-                            <img src={"src/assets/images/thompson.svg"} alt={"Thompson"} className={"w-full"} />
+                            <img src={Thompson} alt={"Thompson"} className={"w-full"} />
                             <h1 className={"text-sm font-bold"}>Thompson Smith</h1>
                             <p className={"text-xsm text-dark-gray"}>Head of finance</p>
                         </div>
@@ -194,7 +191,7 @@ const About = () => {
                             data-aos-duration="800"
                             data-aos-delay="200"
                         >
-                            <img src={"src/assets/images/jackson.svg"} alt={"Jackson"} className={"w-full"} />
+                            <img src={Jackson} alt={"Jackson"} className={"w-full"} />
                             <h1 className={"text-sm font-bold"}>Jackson Rouke</h1>
                             <p className={"text-xsm text-dark-gray"}>Lead Designer</p>
                         </div>
@@ -205,7 +202,7 @@ const About = () => {
                             data-aos-duration="800"
                             data-aos-delay="300"
                         >
-                            <img src={"src/assets/images/Maria.svg"} alt={"Maria"} className={"w-full"} />
+                            <img src={Maria} alt={"Maria"} className={"w-full"} />
                             <h1 className={"text-sm font-bold"}>Maria Simpson</h1>
                             <p className={"text-xsm text-dark-gray"}>Senior Architect</p>
                         </div>
