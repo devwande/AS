@@ -32,7 +32,7 @@ const Footer = () => {
             <footer className=" hidden ls:flex justify-center  ">
                 <div className="flex w-full max-w-[1440px] mt-32">
                     <div className="flex w-full min-w-[85%] max-w-[1300px] bg-light-gray space-x-10 text-xsm text-medium-gray font-primary font-bold items-center">
-                        <img src={archMobile} alt="arch-mobile" className="" />
+                        <img src={archMobile} alt="arch-mobile" onClick={() => navigate('/')} className="" />
                         <button className="hover:text-black whitespace-nowrap" onClick={() => navigate("/portfolio")}>Portfolio</button>
                         <button className="hover:text-black whitespace-nowrap" onClick={() => navigate("/about")}>About Us</button>
                         <button className="hover:text-black whitespace-nowrap" onClick={() => navigate("/contact")}>Contact</button>

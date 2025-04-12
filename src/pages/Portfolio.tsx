@@ -53,9 +53,6 @@ const Portfolio = () => {
         })
     }, [])
 
-
-
-
     const projects: Portfolio[] = [
         { src:seraph, label: "Seraph Station", date: "September 2019" },
         { src:eebox, label: "Eebox Building", date: "August 2017" },

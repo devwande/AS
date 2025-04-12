@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import {ArrowRight} from "lucide-react";
+import {useNavigate} from "react-router-dom";
+
+
 
 const ProjectPages = ({ src, alt, title, content }: any) => {
+    const navigate = useNavigate();
     return (
         <>
             <div className="relative hidden lg:block ">
@@ -16,7 +20,7 @@ const ProjectPages = ({ src, alt, title, content }: any) => {
                     <h1 className="text-white font-primary font-medium lg:w-[600px] text-[clamp(0.5rem,5.14vw+1rem,1.5rem)] leading-[clamp(1.1rem,10.3vw+1.2rem,2.15rem)]">
                         {content}
                     </h1>
-                    <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="button mt-10 font-primary max-w-[300px]">
+                    <motion.button onClick={() => navigate("/portfolio")} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="button mt-10 font-primary max-w-[300px]">
                         See Our Portfolio <ArrowRight />
                     </motion.button>
                 </motion.div>

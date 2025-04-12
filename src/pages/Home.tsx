@@ -98,13 +98,11 @@ const Home = () => {
                             <p className="text-white font-medium text-[clamp(1.125rem,5.14vw+1rem,1.5rem)] leading-[clamp(1.1rem,10.3vw+1.2rem,2.15rem)] max-w-[500px]">
                                 Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.
                             </p>
-                            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}  className="button px-12 mt-20 font-primary">
+                            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => navigate('/portfolio')}  className="button px-12 mt-20 font-primary">
                                 See Our Portfolio {""}
                                 <ArrowRight />
                             </motion.button>
-
                         </motion.div>
-                        {/*initial={{ opacity: 1, }} whileInView={{ opacity: 1, scale: 1.001, transition: { duration: 3 }, }} viewport={{ once: true }}*/}
 
                         {/* DESKTOP VERSION */}
                         <div className={"absolute mx-auto h-full max-h-[800px] w-full object-cover"}>
@@ -161,7 +159,7 @@ const Home = () => {
                         <h1 className="text-white text-[clamp(3rem,9.14vw+1rem,4.2rem)] leading-[clamp(3.25rem,10.3vw+1.2rem,4.3rem)] font-[800] tracking-[0.075rem] whitespace-nowrap ">
                             Small team, <br/>big ideas
                         </h1>
-                        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="button">
+                        <motion.button onClick={() => navigate("/about")} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="button">
                             About us {""}
                             <ArrowRight/>
                         </motion.button>
