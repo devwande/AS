@@ -1,5 +1,3 @@
-"use client"
-
 import { useEffect } from "react"
 import Navbar from "../components/Navbar.tsx"
 import Footer from "../components/Footer.tsx"

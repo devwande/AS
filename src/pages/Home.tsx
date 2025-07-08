@@ -1,5 +1,3 @@
-"use client"
-
 import Navbar from "../components/Navbar.tsx"
 import { ArrowRight } from "lucide-react"
 import { useNavigate } from "react-router-dom"
