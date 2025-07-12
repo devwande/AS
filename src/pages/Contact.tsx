@@ -121,7 +121,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <main className={"space-y-12 md:px-18 max-w-[570px] md:max-w-full mx-auto xl:max-w-[1440px]"}>
+      <main className={"space-y-12 md:px-18 max-w-[570px] md:max-w-full xl:max-w-[1440px]"}>
         <div className={"md:hidden container-body space-y-8"} data-aos="fade-up" data-aos-duration="800">
           <h1 className={"font-primary font-bold text-6xl"}>
             Tell us about <br />
@@ -258,9 +258,10 @@ const Contact = () => {
             </form>
           </div>
         </div>
+            <Footer />  
       </main>
 
-      <Footer />
+    
     </main>
   )
 }

@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap'); */
 @layer theme, base, components, utilities;
 
 
@@ -67,7 +69,7 @@
         --breakpoint-ld: 1140px;
         --breakpoint-xl: 1280px;
 
-        --font-primary: "league spartan", "sans-serif";
+        --font-primary: "Lato", sans-serif;
         --color-dark-blue: rgb(27, 29, 35);
         --color-dark-gray: rgb(96, 99, 109);
         --color-medium-gray: rgb(125, 130, 143);

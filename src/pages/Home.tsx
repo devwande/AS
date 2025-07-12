@@ -1,31 +1,31 @@
-import Navbar from "../components/Navbar.tsx"
-import { ArrowRight } from "lucide-react"
-import { useNavigate } from "react-router-dom"
-import Footer from "../components/Footer"
-import Paramour from "../assets/images/paramour.webp"
-import { motion } from "framer-motion"
-import { useState, useEffect } from "react"
-import ParamourPage from "../components/ParamourPage.tsx"
-import SeraphPage from "../components/SeraphPage.tsx"
-import FederalPage from "../components/FederalPage.tsx"
-import TrinityPage from "../components/TrinityPage.tsx"
-import DeSol from "../assets/images/de-sol.webp"
-import Tower from "../assets/images/228B.svg"
-import Prototype from "../assets/images/prototype.svg"
-import Welcome from "../assets/images/welcome.svg"
-import smallTeam from "../assets/images/smallTeam.svg"
+import Navbar from "../components/Navbar.tsx";
+import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
+import Paramour from "../assets/images/paramour.webp";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import ParamourPage from "../components/ParamourPage.tsx";
+import SeraphPage from "../components/SeraphPage.tsx";
+import FederalPage from "../components/FederalPage.tsx";
+import TrinityPage from "../components/TrinityPage.tsx";
+import DeSol from "../assets/images/de-sol.webp";
+import Tower from "../assets/images/228B.svg";
+import Prototype from "../assets/images/prototype.svg";
+import Welcome from "../assets/images/welcome.svg";
+import smallTeam from "../assets/images/smallTeam.svg";
 
 interface Project {
-  id: number
-  name: string
-  src?: string
+  id: number;
+  name: string;
+  src?: string;
 }
 
 const projects: Project[] = [
   { id: 1, name: "Project Del Sol", src: DeSol },
   { id: 2, name: "228B Tower", src: Tower },
   { id: 3, name: "Le Prototype", src: Prototype },
-]
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -36,43 +36,48 @@ const containerVariants = {
       staggerChildren: 0.4,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { x: 50, opacity: 0 },
   visible: { x: 0, opacity: 1 },
-}
+};
 
 const fadeIn = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-}
+};
 
 const staggerContainer = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.4 } },
-}
+};
 
 const Home = () => {
-  const [currentPage, setCurrentPage] = useState(1)
-  const pageOrder = ["example", "paramour", "seraph", "federal", "trinity"]
-  const navigate = useNavigate()
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageOrder = ["example", "paramour", "seraph", "federal", "trinity"];
+  const navigate = useNavigate();
 
   // Preload critical images
   useEffect(() => {
-    const criticalImages = [Paramour, smallTeam, Welcome]
+    const criticalImages = [Paramour, smallTeam, Welcome];
     criticalImages.forEach((src) => {
-      const img = new Image()
-      img.src = src
-    })
-  }, [])
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   const advance = (index: number) => {
-    setCurrentPage(index)
-  }
+    setCurrentPage(index);
+  };
 
   return (
-    <motion.main initial="hidden" animate="visible" exit="hidden" className={"max-w-[1440px] w-full mx-auto relative"}>
+    <motion.main
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      className={"max-w-[1440px] w-full mx-auto relative"}
+    >
       <div className="hidden md:flex">
         <div className="absolute top-0 left-12">
           <hr className="top-0 left-16 w-[1px] h-24 bg-medium-gray transform translate-x-0 translate-y-0" />
@@ -118,8 +123,8 @@ const Home = () => {
                 Project <br /> Paramour
               </h1>
               <p className="text-white font-medium text-[clamp(1.125rem,5.14vw+1rem,1.5rem)] leading-[clamp(1.1rem,10.3vw+1.2rem,2.15rem)] max-w-[500px]">
-                Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern
-                architecture.
+                Project made for an art museum near Southwest London. Project
+                Paramour is a statement of bold, modern architecture.
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -133,20 +138,26 @@ const Home = () => {
             </motion.div>
 
             {/* DESKTOP VERSION */}
-            <div className={"absolute mx-auto h-full max-h-[800px] w-full object-cover"}>
+            <div
+              className={
+                "absolute mx-auto h-full max-h-[800px] w-full object-cover"
+              }
+            >
               {pageOrder[currentPage] === "paramour" && <ParamourPage />}
               {pageOrder[currentPage] === "seraph" && <SeraphPage />}
               {pageOrder[currentPage] === "federal" && <FederalPage />}
               {pageOrder[currentPage] === "trinity" && <TrinityPage />}
             </div>
 
-            <div className="hidden lg:block absolute bg-white font-spartan text-xsm font-bold bottom-[0px] left-[-80px] ">
+            <div className="hidden lg:block absolute bg-white font-primary text-xsm font-bold bottom-[0px] left-[-80px] ">
               {[1, 2, 3, 4].map((item, i) => (
                 <button
                   key={i}
                   onClick={() => advance(item)}
                   className={`p-5 w-[80px] ${
-                    currentPage === item ? "bg-black text-white" : "bg-white text-gray  hover:bg-light-gray"
+                    currentPage === item
+                      ? "bg-black text-white"
+                      : "bg-white text-gray  hover:bg-light-gray"
                   }`}
                 >
                   {`0${item}`}
@@ -184,18 +195,21 @@ const Home = () => {
               className="ld:ml-auto grid gap-6 ld:min-w-[500px] max-w-[572px] ls:max-w-[700px] lg:max-w-[700px] ld:max-w-[445px] md:text-[1.125rem]"
             >
               <p>
-                We have a unique network and skillset to help bring your projects to life. Our small team of highly
-                skilled individuals combined with our large network put us in a strong position to deliver exceptional
-                results.
+                We have a unique network and skillset to help bring your
+                projects to life. Our small team of highly skilled individuals
+                combined with our large network put us in a strong position to
+                deliver exceptional results.
               </p>
               <p>
-                Over the past 10 years, we have worked on all kinds of projects. From stations to high-rise buildings,
-                we create spaces that inspire and delight.
+                Over the past 10 years, we have worked on all kinds of projects.
+                From stations to high-rise buildings, we create spaces that
+                inspire and delight.
               </p>
               <p>
-                We work closely with our clients so that we understand the intricacies of each project. This allows us
-                to work in harmony the surrounding area to create truly stunning projects that will stand the test of
-                time.
+                We work closely with our clients so that we understand the
+                intricacies of each project. This allows us to work in harmony
+                the surrounding area to create truly stunning projects that will
+                stand the test of time.
               </p>
             </div>
           </div>
@@ -204,7 +218,11 @@ const Home = () => {
             data-aos-delay={"600"}
             className="z-0 h-full max-w-[350px] mr-[-0.35rem] hidden ld:block"
           >
-            <img src={Welcome || "/placeholder.svg"} alt={"welcome-image"} loading="lazy" />
+            <img
+              src={Welcome || "/placeholder.svg"}
+              alt={"welcome-image"}
+              loading="lazy"
+            />
           </div>
         </motion.section>
 
@@ -269,7 +287,9 @@ const Home = () => {
                 <div className="absolute inset-0 ls:h-auto bg-black/30" />
                 <div className="absolute inset-0 flex justify-between">
                   <div className="flex flex-col justify-end p-6">
-                    <h3 className="text-white text-sm font-bold">{project.name}</h3>
+                    <h3 className="text-white text-sm font-bold">
+                      {project.name}
+                    </h3>
                     <a
                       onClick={() => navigate("/portfolio")}
                       className="text-white/80 text-xsm hover:text-white transition-colors cursor-pointer"
@@ -278,7 +298,9 @@ const Home = () => {
                     </a>
                   </div>
                   <div className="ls:absolute md:block p-3 ls:-right-4 text-light-gray text-[250px] leading-[200px] font-bold font-primary">
-                    <h1 className="max-md:flex max-md:items-end">{project.id}</h1>
+                    <h1 className="max-md:flex max-md:items-end">
+                      {project.id}
+                    </h1>
                   </div>
                 </div>
               </div>
@@ -297,6 +319,6 @@ const Home = () => {
         <Footer />
       </main>
     </motion.main>
-  )
-}
-export default Home
+  );
+};
+export default Home;
